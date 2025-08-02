@@ -1,8 +1,15 @@
 # SRINFOTECHAWSANDDEVOPSDailyClassNote
 
 
+
+
+
+
+
+
 27/07/2025_Demo::
 ==================
+
 
 In Demo session we have Overview of the all CI/CD tools & AWS Road Map
 
@@ -74,8 +81,12 @@ Benefits of DevOps ::
 
 
 
+
+
 02/08/2025::
 ==============
+
+
 
 What is Git?
 
@@ -101,6 +112,9 @@ once installed right click on your local machine you can found Open Git batch he
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/60c63d76-3cc5-4183-ab00-6284111858da" />
 
 
+
+
+
 GitHub account creation::
 =============================
 
@@ -109,3 +123,73 @@ For creating github account EmailId is Required
 go to link --https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
 
 Enter Email & password ,Username click continue ---Account will create successfully image
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/96cb1d99-753a-4ff5-8221-29145a3f29e3" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8246f56-598d-424c-a752-28c72401c510" />
+
+
+Github::
+==========
+
+Github is a one of the SCM(Source code management) tool and store the Project code.
+
+Repository: 
+===================
+
+storage area of your source code. Create a Repository on GitHub  
+
+OR
+
+Repositories::	
+==============
+
+Storage spaces for your project files and history. Think of it as a folder for a project.
+
+
+Github Introduction::
+==================
+
+GitHub is a web-based platform for version control and collaboration, allowing developers to store and manage their code in repositories.
+
+Version Control: :: GitHub uses Git, a distributed version control system, to track changes in code. This allows multiple people to work on the same project without overwriting each other's contributions.
+
+Repositories::: where you can store your project files and track the history of changes made to those files.Public and private repos can be created depending on accessibility needs.
+
+
+click Repositories
+
+
+<img width="1276" height="648" alt="image" src="https://github.com/user-attachments/assets/529103b6-d817-43c6-ab26-38ef98339411" />
+
+
+Click New
+
+<img width="1325" height="655" alt="image" src="https://github.com/user-attachments/assets/148ac26f-214c-4a45-ae9f-ca7104ba9c7a" />
+
+
+Enter Repository Name::SRINFOTECHDEMO
+
+<img width="1311" height="662" alt="image" src="https://github.com/user-attachments/assets/4c8d604c-4fea-454c-b12f-fa295d1ab792" />
+
+
+Public:: Anyone on the internet can see this repository.
+
+<img width="1300" height="604" alt="image" src="https://github.com/user-attachments/assets/3c884a24-87bf-48b6-bd28-c4a6a67ab5d8" />
+
+Private:: You choose who can see and commit to this repository.
+
+select Add a README file
+
+<img width="1346" height="699" alt="image" src="https://github.com/user-attachments/assets/73c29693-cf1f-40c4-bb41-d64f3a7fdc91" />
+
+
+Click Create Repository
+
+<img width="1315" height="702" alt="image" src="https://github.com/user-attachments/assets/934eec8d-6734-4111-b4c2-819ef835f57a" />
+
+Repository Created SUccessfully with Default branch main
+
+<img width="1317" height="697" alt="image" src="https://github.com/user-attachments/assets/ad4a2344-159b-49e4-a83e-e85df6fdbb53" />
+
