@@ -28,6 +28,7 @@ In Demo session we have Overview of the all CI/CD tools & AWS Road Map
 
 
 1.Overview about the all CI/CD & AWSDevOps Training flow
+
 2.Discussed about the all the DevOps roles
 
 
