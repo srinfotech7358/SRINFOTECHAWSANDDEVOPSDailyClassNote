@@ -401,3 +401,35 @@ To github.com:srinfotechbatch3/DevOpsDemo.git
    5e31d17..b28db23  main -> main
 
 HP@DESKTOP-3GU6R56 MIN
+
+
+
+Fork in Github::
+====================
+
+In GitHub, forking is a way to create your own copy of someone else's repository. example please fork below project to your own github account
+
+https://github.com/srinfotech7358/spring-petclinic
+
+steps to fork the project::
+============================
+
+Go to Above Project URL
+
+https://github.com/srinfotech7358/spring-petclinic
+
+![image](https://github.com/user-attachments/assets/5d3f74e8-b0f3-4875-a965-dea9aafe2ab8)
+
+at top right we can found Fork option in github Account 
+
+![image](https://github.com/user-attachments/assets/82f5b61e-cdc0-43f1-be3e-e335c1d236ce)
+
+Click on Fork and click create Fork 
+
+![image](https://github.com/user-attachments/assets/f115849b-aed6-4f6b-b72a-a62a86058c8b)
+
+Successfully Fork done from someone else's repository 
+
+once above steps done ,please clone the Project and Modified files and push to github repository
+
+
