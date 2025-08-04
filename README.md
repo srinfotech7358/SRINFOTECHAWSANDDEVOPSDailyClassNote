@@ -196,3 +196,208 @@ Repository Created SUccessfully with Default branch main
 
 <img width="1317" height="697" alt="image" src="https://github.com/user-attachments/assets/ad4a2344-159b-49e4-a83e-e85df6fdbb53" />
 
+
+
+04/08/2025::
+==========
+
+
+git commands::
+================
+
+git commands::
+
+---git clone <github repository url>
+
+>git clone https://github.com/srinfotechbatch3/DevOpsDemo.git
+
+>git status
+
+>git add --all
+
+>git commit -m "i have added hello world .java class"
+
+>git push
+
+if we get any Access denied issues during push the changes from local to remote repository,please be authenticate below commands
+
+>git config --global user.name "srinfotechbatch3"
+
+>git config --global user.email "srinfotechbatch3@gmail.com"
+
+
+Generate SSHKeys:: to Integarte Git to Github
+==============================================
+
+syntax::ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+>ssh-keygen -t ed25519 -C "srinfotechbatch1@gmail.com"
+
+Keys avaibale path and save the key (/c/Users/HP/.ssh/id_ed25519):
+
+![image](https://github.com/user-attachments/assets/c1031abb-57bf-4585-88a9-e1fbb9358621)
+
+
+![image](https://github.com/user-attachments/assets/ce78114d-1a3f-4adf-a677-c3f26736f6cc)
+
+
+Please follow below links for more understanding 
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+Once genearted the keys (public/private) and copy public key to Github Account
+
+Go to -->settings
+
+
+![image](https://github.com/user-attachments/assets/e6856f23-6d62-4e02-8fb2-05c720542ec3)
+
+
+
+Click SSH and GPG Keys
+
+![image](https://github.com/user-attachments/assets/906f1f68-79a8-4920-837f-38f165e5849e)
+
+
+click New SSH Key
+
+![image](https://github.com/user-attachments/assets/a461189f-f9e1-415c-b52e-c25f6cfaf1d2)
+
+
+Add new SSH Key and click Add SSH Key
+
+
+![image](https://github.com/user-attachments/assets/f62d4d90-f588-462b-bf04-54de51e566d8)
+
+
+
+
+Lab Practice::
+==============
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3
+$ git clone git@github.com:srinfotechbatch3/DevOpsDemo.git
+Cloning into 'DevOpsDemo'...
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3
+$ cd DevOpsDemo
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        HelloWorld.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git add --all
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'HelloWorld.java', LF will be replaced by CRLF the next time Git touches it
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   HelloWorld.java
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git commit -m "i have added hello world .java class"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'HP@DESKTOP-3GU6R56.(none)')
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git config --global user.email "srinfotechbatch3@gmail.com"
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git config --global user.name "srinfotechbatch3"
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   HelloWorld.java
+        modified:   README.md
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git commit -m "i have added hello world .java class"
+[main b28db23] i have added hello world .java class
+ 3 files changed, 48 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 HelloWorld.java
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Documents/SR Infotech Batch3/DevOpsDemo (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 806 bytes | 268.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:srinfotechbatch3/DevOpsDemo.git
+   5e31d17..b28db23  main -> main
+
+HP@DESKTOP-3GU6R56 MIN
