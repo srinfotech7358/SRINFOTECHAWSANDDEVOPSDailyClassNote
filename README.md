@@ -236,10 +236,10 @@ syntax::ssh-keygen -t ed25519 -C "your_email@example.com"
 
 Keys avaibale path and save the key (/c/Users/HP/.ssh/id_ed25519):
 
-![image](https://github.com/user-attachments/assets/c1031abb-57bf-4585-88a9-e1fbb9358621)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/036b310b-0c16-4bc1-b4ef-0bd479450509" />
 
 
-![image](https://github.com/user-attachments/assets/ce78114d-1a3f-4adf-a677-c3f26736f6cc)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/148e65ae-7023-4b85-9c43-3edbaa9c04c7" />
 
 
 Please follow below links for more understanding 
@@ -250,28 +250,33 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 
 Once genearted the keys (public/private) and copy public key to Github Account
 
-Go to -->settings
+Go to -->Your Copilot
 
 
-![image](https://github.com/user-attachments/assets/e6856f23-6d62-4e02-8fb2-05c720542ec3)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6c7a3749-757f-4adc-bcd8-ca328330858f" />
+
 
 
 
 Click SSH and GPG Keys
 
-![image](https://github.com/user-attachments/assets/906f1f68-79a8-4920-837f-38f165e5849e)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7fb1aa6-52c0-47f6-a378-99475c0a9b43" />
+
 
 
 click New SSH Key
 
-![image](https://github.com/user-attachments/assets/a461189f-f9e1-415c-b52e-c25f6cfaf1d2)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad66cb42-82af-48ca-b1c3-01ab480e17a7" />
+
 
 
 Add new SSH Key and click Add SSH Key
 
 
-![image](https://github.com/user-attachments/assets/f62d4d90-f588-462b-bf04-54de51e566d8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/df130ae9-0e1b-4041-8dbd-a878088e69cf" />
 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1adfb3b1-e41c-453d-a035-29a54dd67d77" />
 
 
 
@@ -409,24 +414,30 @@ Fork in Github::
 
 In GitHub, forking is a way to create your own copy of someone else's repository. example please fork below project to your own github account
 
-https://github.com/srinfotech7358/spring-petclinic
+https://github.com/srinfotechbatch3/DevOpsDemo
+
 
 steps to fork the project::
 ============================
 
 Go to Above Project URL
 
-https://github.com/srinfotech7358/spring-petclinic
+https://github.com/srinfotechbatch3/DevOpsDemo
 
-![image](https://github.com/user-attachments/assets/5d3f74e8-b0f3-4875-a965-dea9aafe2ab8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/45b0c823-863d-447b-943e-a32cbfc6cb65" />
+
 
 at top right we can found Fork option in github Account 
 
-![image](https://github.com/user-attachments/assets/82f5b61e-cdc0-43f1-be3e-e335c1d236ce)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/406477ce-4851-462c-9187-30e50320c4f7" />
+
 
 Click on Fork and click create Fork 
 
-![image](https://github.com/user-attachments/assets/f115849b-aed6-4f6b-b72a-a62a86058c8b)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f399adbd-d00c-4cd9-9dd3-9a0e16170aa5" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/59c07b24-f750-41ba-851c-4f2b6712ccaf" />
+
 
 Successfully Fork done from someone else's repository 
 
