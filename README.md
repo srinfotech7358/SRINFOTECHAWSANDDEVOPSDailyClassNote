@@ -1,6 +1,6 @@
 # SRINFOTECHAWSANDDEVOPSDailyClassNote
 
-New Note
+
 
 
 
