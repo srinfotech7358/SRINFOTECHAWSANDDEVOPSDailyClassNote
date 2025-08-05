@@ -491,40 +491,49 @@ below are the steps to raise PR::
 
 Go to -->Pull requests and click
 
-![image](https://github.com/user-attachments/assets/5cfe4883-dd46-4643-a506-b54262c36202)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/baf5a7d7-f69d-44e8-87ad-ae67d082353f" />
+
 
 Click New Pull Request::
 
-![image](https://github.com/user-attachments/assets/37020743-a2e9-4163-9afd-7680d58fc63a)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/68456b4f-bd40-41b6-a238-25439f97dff4" />
 
-![image](https://github.com/user-attachments/assets/dad8eec2-b480-460f-8715-9d9c5fc3c12d)
 
-please select base & compare branches so here base branch is release/2025.02.25 and compare branch is feature/2025.02.25
+please select base & compare branches so here base branch is release/2025.08.10 and compare branch is feature/2025.08.05
 
 i'm going to merge code changes from feature branch to release branch 
 
-![image](https://github.com/user-attachments/assets/185f0572-c51a-4ab2-884c-d2694522b268)
 
 click create pull request
 
-![image](https://github.com/user-attachments/assets/91068166-9d06-4b47-9d68-8c1251b0872f)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6b7a39c0-7a34-45c9-812b-ca518d1a441a" />
+
 
 ![image](https://github.com/user-attachments/assets/08a98671-c810-46fc-9024-17bae7538a61)
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e36c29e8-3c38-4579-8073-58ac6304e6fd" />
 
-parasa7358 wants to merge 1 commit into release/2025.02.25 from feature/2025.02.25  
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dc582d4a-e173-4648-a76c-3aebd7869b5b" />
+
 
 click merge request
 
 ![image](https://github.com/user-attachments/assets/44a4b84e-1aef-4b19-a93e-64e48b362b29)
 
+ Open
+srinfotechbatch3 wants to merge 1 commit into main from feature/2025.08.05
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5a70ee7d-fc8e-45aa-bb28-6a445a223cf0" />
+
 
 confirm merge
 
-![image](https://github.com/user-attachments/assets/cc12b687-b664-4497-bf91-0ab17f37bfa0)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6e9ab2f-30cc-4fe2-9754-03f6f6262786" />
+
 
 Merged
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8dfb8ae-1a1c-4245-a4ee-944db6bbd07e" />
 
 
 LAB Practice::
