@@ -482,6 +482,36 @@ cloning references::
 ![image](https://github.com/user-attachments/assets/87f6ed4a-095b-4faa-854a-7fcdc019f31f)
 
 
+
+Create New Branch::
+=================
+
+Click Branches
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a795a257-a126-449e-9dba-22729bec940d" />
+
+Find New Branch at Right side and click
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2b5fbd36-953e-45e0-baef-450c680b7e5f" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17de84ed-cc93-4b01-8f32-5a1ff0ddf3ee" />
+
+New feature Branch Formate----> feature/YYYY.MM.DD
+
+feature/2025.08.05
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/60902962-ec6c-4c9f-90eb-04c9835a64d0" />
+
+click create New Branch 
+
+Branch Created Successfully
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6821e5f-3b54-406d-a4ae-7f2fd885974f" />
+
+
 Raise PR (Pull Request) :: 
 =================================
 
