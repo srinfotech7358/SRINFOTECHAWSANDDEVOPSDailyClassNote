@@ -453,6 +453,11 @@ once above steps done ,please clone the Project and Modified files and push to g
 Github branching strategy::
 ===========================
 
+Github Branching Model::
+-------------------------------
+
+A GitHub branching model is a structured way of organizing branches in a Git repository to manage development workflows effectively. It helps teams work collaboratively, isolate features, manage releases, and deploy code more efficiently.
+
 <img width="1738" height="779" alt="image" src="https://github.com/user-attachments/assets/38d0bb86-0465-462b-b6e2-85b9adb23d68" />
 
 
