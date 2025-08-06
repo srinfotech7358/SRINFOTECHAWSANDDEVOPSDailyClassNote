@@ -517,6 +517,47 @@ Branch Created Successfully
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b6821e5f-3b54-406d-a4ae-7f2fd885974f" />
 
 
+
+Branches:
+==============
+
+
+main (or master): Always production-ready.
+
+feature/*: Used for new features.
+
+release/*: Prepares for a new production release.
+
+main or master branch:: 
+=====================
+
+This is default branch and whenever we created the empty Repository by defauly main or master branche is created automatically. main or master branch always stable and live code
+
+feature branch:: 
+===============
+
+It could be a new feature, an improvement of existing features, bug fixes, or any other changes. A feature branch is a type of branch in Git typically used to develop new features for the software.feature branch will created from main or master OR feature branch created from latest release branch always based on the release cycle
+
+formate:: 
+=============
+
+feature/YYYY.MM.DD feature/2025.06.22
+
+release branch:: 
+====================
+
+Based on the release we have created release branch accourdingly and starts the next release cycle. always release branch created from master only and master have stable and live code and post release we shold merged code changes to master branch only
+
+release/2025.07.20
+
+hotfix branch:: 
+==================
+
+always created from main or master branch only for production fixes.once production fix done we should merged directly to main or master branch only.
+
+always created this hotfix branch for production issues fixes
+
+
 Raise PR (Pull Request) :: 
 =================================
 
