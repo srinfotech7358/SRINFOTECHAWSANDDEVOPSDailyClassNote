@@ -752,6 +752,9 @@ If multiple developers OR DevOps Engineers are working on same Project/MOdules, 
 
 
 
+<img width="1166" height="704" alt="image" src="https://github.com/user-attachments/assets/005333f6-17e0-4a81-a2e9-71ab93a96202" />
+
+
 >git pull --->git pull command is use, copies changes from a remote repository directly into your working directory (local directory) and merged code changes from remote repository to local repository 
 
 >git fetch ---->The git fetch command only fetch the changes into your local Git repo and it will not merged anything. just fetch the details
