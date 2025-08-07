@@ -739,11 +739,17 @@ To github.com:srinfotechbatch3/DevOpsDemo.git
 
 
 
+
+
 06/07/2025::
 ===============
 
+
+
 Avoide conflicts in RealTime Scenarious::
 =================
+
+
 
 If multiple developers OR DevOps Engineers are working on same Project/MOdules, if they tried to commits thier code changes to Repository, it will faces the  conflicts issues and how to resolved those conflicts issues in real time projects 
 
@@ -946,5 +952,191 @@ commit     Record changes to the repository
  pull       Fetch from and integrate with another repository or a local branch
  
  push       Update remote refs along with associated objects
+
+
+
+
+
+07/08/2025
+==============
+
+
+Jenkins Introductiion::
+============================
+Jenkins is a free and open source automation server/tool. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
+
+Jenkins is a Orchestration tool
+
+Jenkins is a CI/CD tool
+
+Jenkins is a Schedular
+
+Jenkins is a crone job schedular
+
+
+![image](https://github.com/user-attachments/assets/bf52c5e8-bdc3-473a-acfe-9d78f9e05257)
+
+![image](https://github.com/user-attachments/assets/8f101b62-5313-47c2-a870-56483b7ad68f)
+
+Roles And Responsibilities::
+================================
+1)The devops engineer was responsibility to release the product to the market as soon as possible 
+
+2)release the product speed to the market 
+
+3)Devops engineer was give continues feedback to the developers 4) Devops engineer responsibility start from git and end with production
+
+A) when your activity start from git and end with production environment(production servers)Continues deployment 
+when your activity start from git to LLE(lower level environment,testing environment,pre-prod…et) environment(pre-production servers)Continues delivery non-production environment
+
+Tutorials::
+============
+
+https://www.tutorialspoint.com/jenkins/jenkins_overview.htm https://www.geeksforgeeks.org/jenkins-tutorial/#prerequisites
+
+Download JDK 17 ::
+================
+
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+
+Windows x64 Installer 153.92 MB
+
+Windows x64 Compressed Archive	172.87 MB	
+
+https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.zip (sha256 )
+
+JDK 17 Environment setup::
+==============================
+
+Go to Windows Search box & type Edit the system environemnt variables and click
+
+It will navigate to System properties
+
+![image](https://github.com/user-attachments/assets/2de9b257-9029-43f7-af30-4f4f4827731a)
+
+Click Environment Variables
+
+
+![image](https://github.com/user-attachments/assets/0b02d209-cb85-4afd-869f-923df054b7de)
+
+![image](https://github.com/user-attachments/assets/88adc878-dedd-4150-9ee8-f01c75677ab2)
+
+User variables::
+================
+
+![image](https://github.com/user-attachments/assets/d6bfe193-6a5c-4a8b-a21a-fa77c07a4bbc)
+
+Click New
+
+Variable Name:: JAVA_HOME
+
+Variable Value:: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
+
+![image](https://github.com/user-attachments/assets/5743966a-8e88-4502-bd3a-904f1a839a01)
+
+Click OK
+
+![image](https://github.com/user-attachments/assets/1af67329-3601-4e23-855e-b69cf5763d95)
+
+
+System variable::
+=================
+
+![image](https://github.com/user-attachments/assets/0cecde24-19be-4989-98c5-c3eb9c20734c)
+
+Edit Path
+
+![image](https://github.com/user-attachments/assets/5f302184-84cb-4e66-b17a-3ce4792fa45c)
+
+Click New and give Java Installed path till \bin
+
+C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12\bin
+
+![image](https://github.com/user-attachments/assets/d918df00-9c10-424f-b155-7a22e925d291)
+
+Click OK
+
+You Can verify Java is Installed Or Not
+
+Go to command Prompt
+
+![image](https://github.com/user-attachments/assets/773f6318-d8a5-4d2c-803b-e504d84e24e1)
+
+![image](https://github.com/user-attachments/assets/aee76eab-4f27-4fce-af69-f28a872d37dc)
+
+
+>java --version
+
+C:\Users\HP>java --version
+java 17.0.12 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+
+![image](https://github.com/user-attachments/assets/92e49e72-2f7c-464c-b8f1-2a30e6ebe702)
+
+Above Screeenshot JDK17 setup is done
+
+
+
+
+Installed jenkins in Windows::
+================================
+
+https://www.jenkins.io/download/
+
+Go to google search -->download jenkins war file for windows
+
+click below Jenkins version
+
+Download Jenkins 2.516.1 LTS for:
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ad241e7-3ae0-4f30-8ef2-33af47891c5b" />
+
+
+Jenkins.war file is downloaded
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98751ae3-bfde-45fc-8863-1f1eb1d954eb" />
+
+
+
+Steps::
+
+https://www.jenkins.io/download/
+
+1. First download the jenkins.war file and right click -->open gitbash here
+   
+
+ ![image](https://github.com/user-attachments/assets/77ca0550-974b-463f-953a-d81c9603d69a)
+
+  
+2. run the command  -->java -jar jenkins.war --httpPort=9090
+
+![image](https://github.com/user-attachments/assets/93cc2393-8a20-485f-ab8c-23451a64ccd3)
+
+![image](https://github.com/user-attachments/assets/75e03c2f-0ccf-4da0-90cf-d92de22903c3)
+
+we can see Jenkins is fully up and running
+
+![image](https://github.com/user-attachments/assets/b0e26f12-f202-4e69-8672-223e6947d379)
+
+
+Browse to http://localhost:9090 and wait until the Unlock Jenkins page appears
+
+Installed the default suggested plugins
+
+![image](https://github.com/user-attachments/assets/081c44fc-a6a3-46fa-82e3-7b34c2dc2dd6)
+
+click on continue 
+
+Need to create jenkins user profile 
+
+USER Name--->admin (any name you can provide)
+
+PASSWORD  -->admin  (any password as your wish but make sure you should remembered the these credentials)
+
+![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
+
+
 
 
