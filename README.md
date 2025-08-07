@@ -974,9 +974,8 @@ Jenkins is a Schedular
 Jenkins is a crone job schedular
 
 
-![image](https://github.com/user-attachments/assets/bf52c5e8-bdc3-473a-acfe-9d78f9e05257)
+<img width="1830" height="755" alt="image" src="https://github.com/user-attachments/assets/a4164755-6340-4024-9295-bcadc65a3000" />
 
-![image](https://github.com/user-attachments/assets/8f101b62-5313-47c2-a870-56483b7ad68f)
 
 Roles And Responsibilities::
 ================================
