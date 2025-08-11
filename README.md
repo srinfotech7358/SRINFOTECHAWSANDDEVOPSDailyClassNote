@@ -1139,3 +1139,317 @@ PASSWORD  -->admin  (any password as your wish but make sure you should remember
 
 
 
+
+11/08/2025::
+===============
+
+Jenkins Introductiion::
+============================
+Jenkins is a free and open source automation server/tool. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
+
+Jenkins is a Orchestration tool
+
+Jenkins is a CI/CD tool
+
+Jenkins is a Schedular
+
+Jenkins is a crone job schedular
+
+
+<img width="1830" height="755" alt="image" src="https://github.com/user-attachments/assets/a4164755-6340-4024-9295-bcadc65a3000" />
+
+
+Download JDK 17 ::
+================
+
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+
+Windows x64 Installer 153.92 MB
+
+Windows x64 Compressed Archive	172.87 MB	
+
+https://download.oracle.com/java/17/archive/jdk-17.0.12_windows-x64_bin.zip (sha256 )
+
+JDK 17 Environment setup::
+==============================
+
+Go to Windows Search box & type Edit the system environemnt variables and click
+
+It will navigate to System properties
+
+![image](https://github.com/user-attachments/assets/2de9b257-9029-43f7-af30-4f4f4827731a)
+
+Click Environment Variables
+
+
+![image](https://github.com/user-attachments/assets/0b02d209-cb85-4afd-869f-923df054b7de)
+
+![image](https://github.com/user-attachments/assets/88adc878-dedd-4150-9ee8-f01c75677ab2)
+
+User variables::
+================
+
+![image](https://github.com/user-attachments/assets/d6bfe193-6a5c-4a8b-a21a-fa77c07a4bbc)
+
+Click New
+
+Variable Name:: JAVA_HOME
+
+Variable Value:: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
+
+![image](https://github.com/user-attachments/assets/5743966a-8e88-4502-bd3a-904f1a839a01)
+
+Click OK
+
+![image](https://github.com/user-attachments/assets/1af67329-3601-4e23-855e-b69cf5763d95)
+
+
+System variable::
+=================
+
+![image](https://github.com/user-attachments/assets/0cecde24-19be-4989-98c5-c3eb9c20734c)
+
+Edit Path
+
+![image](https://github.com/user-attachments/assets/5f302184-84cb-4e66-b17a-3ce4792fa45c)
+
+Click New and give Java Installed path till \bin
+
+C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12\bin
+
+![image](https://github.com/user-attachments/assets/d918df00-9c10-424f-b155-7a22e925d291)
+
+Click OK
+
+You Can verify Java is Installed Or Not
+
+Go to command Prompt
+
+![image](https://github.com/user-attachments/assets/773f6318-d8a5-4d2c-803b-e504d84e24e1)
+
+![image](https://github.com/user-attachments/assets/aee76eab-4f27-4fce-af69-f28a872d37dc)
+
+
+>java --version
+
+C:\Users\HP>java --version
+java 17.0.12 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+
+![image](https://github.com/user-attachments/assets/92e49e72-2f7c-464c-b8f1-2a30e6ebe702)
+
+Above Screeenshot JDK17 setup is done
+
+
+Maven setup::
+=============
+
+Maven is a powerful build automation and project management tool, primarily used with Java projects
+
+Please follow the below link for more understading the Maven lifecycles OR maven Goals
+
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+MAVEN_HOME=C:\Users\HP\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9
+
+![image](https://github.com/user-attachments/assets/8a0f15af-32c5-4624-af43-59959b02e8c8)
+
+Download link
+
+https://maven.apache.org/download.cgi
+
+
+Make sure we should setup the path at system variable 
+
+JAVA_HOME & MAVEN_HOME
+
+![image](https://github.com/user-attachments/assets/07ddf2ff-a7f1-470b-b07c-66316e8b1d7e)
+
+
+now verify the java version & maven version:: go to git bash and verify. below are refreenced screenshots
+
+> java -version
+
+![image](https://github.com/user-attachments/assets/4319ddcf-5a6a-4844-aa74-5e7e3b88d601)
+
+> mvn -v
+
+![image](https://github.com/user-attachments/assets/ff578d8a-5c15-4686-8fdf-d9c94240ee73)
+
+
+once above setup is ready then we will proceed to installe jenkins
+
+Common Maven Commands::
+==========================
+
+1.mvn clean         # Clean up previous builds
+
+2.mvn compile       # Compile source code
+
+3.mvn test          # Run unit tests
+
+4.mvn package       # Create a JAR/WAR
+
+5.mvn install       # Install package into local repo
+6.mvn clean install        # Deploy package to remote repo
+
+
+
+
+Installed jenkins in Windows::
+================================
+
+https://www.jenkins.io/download/
+
+Go to google search -->download jenkins war file for windows
+
+click below Jenkins version
+
+Download Jenkins 2.516.1 LTS for:
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ad241e7-3ae0-4f30-8ef2-33af47891c5b" />
+
+
+Jenkins.war file is downloaded
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/98751ae3-bfde-45fc-8863-1f1eb1d954eb" />
+
+
+
+Steps::
+
+https://www.jenkins.io/download/
+
+1. First download the jenkins.war file and right click -->open gitbash here
+   
+
+ ![image](https://github.com/user-attachments/assets/77ca0550-974b-463f-953a-d81c9603d69a)
+
+  
+2. run the command  -->java -jar jenkins.war --httpPort=9090
+
+![image](https://github.com/user-attachments/assets/93cc2393-8a20-485f-ab8c-23451a64ccd3)
+
+![image](https://github.com/user-attachments/assets/75e03c2f-0ccf-4da0-90cf-d92de22903c3)
+
+we can see Jenkins is fully up and running
+
+![image](https://github.com/user-attachments/assets/b0e26f12-f202-4e69-8672-223e6947d379)
+
+
+Browse to http://localhost:9090 and wait until the Unlock Jenkins page appears
+
+Installed the default suggested plugins
+
+![image](https://github.com/user-attachments/assets/081c44fc-a6a3-46fa-82e3-7b34c2dc2dd6)
+
+click on continue 
+
+Need to create jenkins user profile 
+
+USER Name--->admin (any name you can provide)
+
+PASSWORD  -->admin  (any password as your wish but make sure you should remembered the these credentials)
+
+![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
+
+
+Create New Jobs In Jenkins::
+================================
+
+Steps::
+
+1.first we need to create New repository in Github
+
+2.please Clone the Empty Repositoy in your local system
+
+3.copy the Spring-petclinic project code to in your repository 
+
+4.once done we need to push project code to github repository 
+
+5. we need to integarte Github to Jenkins
+
+we need to create Sample demo Project in Jenkins
+
+Create sample Freestyle project::
+============================
+
+Github Project URL:::
+=====================
+
+https://github.com/srinfotechbatch3/spring-petclinic
+
+
+
+Click New Item
+
+![image](https://github.com/user-attachments/assets/d9e7f707-aa00-4c74-b9ca-30489ded6f55)
+
+
+Configuration stages::
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+
+![image](https://github.com/user-attachments/assets/b7b5caf1-3d81-4de0-aebc-c2dc5080f916)
+
+
+General Section provide the Project/job description 
+
+
+At SCM stage level select the Git and provide the github details
+
+![image](https://github.com/user-attachments/assets/827c5b34-8a6e-41ad-b6e1-4899348730d6)
+
+Branches to build
+
+![image](https://github.com/user-attachments/assets/51cf678c-afbd-40bc-bbb5-fae55e4c5537)
+
+
+![image](https://github.com/user-attachments/assets/7bab6e2d-7868-460e-bd42-b2697195f3fe)
+
+Build steps::select the Invoke top-level Maven targets
+Goals section
+>mvn clean install
+
+Maven goals::
+
+>mvn test
+
+>mvn install
+
+
+>mvn clean install
+
+
+>mvn clean
+
+
+>mvn package
+
+>mvn compile
+
+![image](https://github.com/user-attachments/assets/53d49170-9dfe-4cad-abc0-50bf268e96c7)
+
+
+Job will be created
+
+Click Build Now
+
+
+Buils is Inprogress
+
+![image](https://github.com/user-attachments/assets/c6e399ce-ac52-47de-94a3-b4d6d156dce5)
+
