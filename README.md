@@ -1253,7 +1253,8 @@ https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 
 MAVEN_HOME=C:\Users\HP\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9
 
-![image](https://github.com/user-attachments/assets/8a0f15af-32c5-4624-af43-59959b02e8c8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fca1b236-b778-490e-abec-61298f74bb9d" />
+
 
 Download link
 
@@ -1264,18 +1265,34 @@ Make sure we should setup the path at system variable
 
 JAVA_HOME & MAVEN_HOME
 
-![image](https://github.com/user-attachments/assets/07ddf2ff-a7f1-470b-b07c-66316e8b1d7e)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c7c2c771-4be4-4488-83b4-c3b9172beca3" />
+
 
 
 now verify the java version & maven version:: go to git bash and verify. below are refreenced screenshots
 
 > java -version
 
-![image](https://github.com/user-attachments/assets/4319ddcf-5a6a-4844-aa74-5e7e3b88d601)
+
+C:\Users\HP>java --version
+java 17.0.12 2024-07-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.12+8-LTS-286)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.12+8-LTS-286, mixed mode, sharing)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/638553a1-2319-43c3-89e3-4e9cd949a634" />
+
 
 > mvn -v
 
-![image](https://github.com/user-attachments/assets/ff578d8a-5c15-4686-8fdf-d9c94240ee73)
+C:\Users\HP>mvn -v
+Apache Maven 3.8.9 (e26b057cc3a17459358ef53e4d0e2e381bf08a1c)
+Maven home: C:\Users\HP\Downloads\apache-maven-3.8.9-bin\apache-maven-3.8.9
+Java version: 17.0.12, vendor: Oracle Corporation, runtime: C:\Users\HP\Downloads\jdk-17.0.12_windows-x64_bin\jdk-17.0.12
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/329d0a8b-1d56-4d27-957d-a779c236224b" />
+
 
 
 once above setup is ready then we will proceed to installe jenkins
