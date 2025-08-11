@@ -1343,7 +1343,8 @@ Browse to http://localhost:9090 and wait until the Unlock Jenkins page appears
 
 Installed the default suggested plugins
 
-![image](https://github.com/user-attachments/assets/081c44fc-a6a3-46fa-82e3-7b34c2dc2dd6)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/8a80769d-672b-42c4-ad59-bdb5a288abc7" />
+
 
 click on continue 
 
@@ -1356,22 +1357,9 @@ PASSWORD  -->admin  (any password as your wish but make sure you should remember
 ![image](https://github.com/user-attachments/assets/f0458a88-da81-4d32-9f87-42458fd214a1)
 
 
-Create New Jobs In Jenkins::
-================================
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e11ae91e-ec78-42e1-b64d-19696755931a" />
 
-Steps::
 
-1.first we need to create New repository in Github
-
-2.please Clone the Empty Repositoy in your local system
-
-3.copy the Spring-petclinic project code to in your repository 
-
-4.once done we need to push project code to github repository 
-
-5. we need to integarte Github to Jenkins
-
-we need to create Sample demo Project in Jenkins
 
 Create sample Freestyle project::
 ============================
@@ -1385,7 +1373,14 @@ https://github.com/srinfotechbatch3/spring-petclinic
 
 Click New Item
 
-![image](https://github.com/user-attachments/assets/d9e7f707-aa00-4c74-b9ca-30489ded6f55)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
+
+Enter an item name     ---->This Should be Name of your Project
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adebc306-828a-4920-bb47-63d8fe060c67" />
+
+
+Click OK
 
 
 Configuration stages::
@@ -1403,24 +1398,38 @@ Configuration stages::
 6.Post Build Actions
 
 
-![image](https://github.com/user-attachments/assets/b7b5caf1-3d81-4de0-aebc-c2dc5080f916)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/515589a7-463e-4209-94e5-cf6c2ce6caab" />
+
 
 
 General Section provide the Project/job description 
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a92f0756-1444-490e-a60b-d3c48bc4be84" />
+
 
 At SCM stage level select the Git and provide the github details
 
-![image](https://github.com/user-attachments/assets/827c5b34-8a6e-41ad-b6e1-4899348730d6)
+
+https://github.com/srinfotechbatch3/spring-petclinic
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6f736b3a-6179-4a86-a56b-08d76c22ffdd" />
+
 
 Branches to build
 
-![image](https://github.com/user-attachments/assets/51cf678c-afbd-40bc-bbb5-fae55e4c5537)
+main branch and this branch should match with github repository branch
 
 
-![image](https://github.com/user-attachments/assets/7bab6e2d-7868-460e-bd42-b2697195f3fe)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d4094c2-e384-4a08-b699-1e4fc4625656" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b392b9e0-631c-404d-bcd7-3e26c096fb16" />
+
 
 Build steps::select the Invoke top-level Maven targets
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/659cddb4-e8fd-44b8-a6c6-1e77a62eaf1b" />
+
+
 Goals section
 >mvn clean install
 
@@ -1451,5 +1460,10 @@ Click Build Now
 
 Buils is Inprogress
 
-![image](https://github.com/user-attachments/assets/c6e399ce-ac52-47de-94a3-b4d6d156dce5)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3444e4a2-865d-41ce-be9e-aa8e8da44d67" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d877e99a-1e20-4ddc-b061-81a585b67ea5" />
+
+
 
