@@ -1503,6 +1503,12 @@ https://github.com/srinfotechbatch3/onlinebookstore.git
 Please try to create the New Job in Jenkins for Onlinebookstore Project and do the Build::
 =========================================================================================
 
+
+Click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
+
+
 steps::
 
 Configuration stages::
@@ -1519,11 +1525,6 @@ Configuration stages::
 
 6.Post Build Actions
 
-
-
-Click New Item
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
 
 Enter Description
 
@@ -1578,34 +1579,206 @@ POLL SCM ----* * * * * --every minute when every commit
 Create one sample POLL SCM jenkins job::
 ===========================================
 Go to jenkins Dashboard
+
 click New Item
 
-![image](https://github.com/user-attachments/assets/1c62657f-935b-4eed-b032-08842fb09a57)
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
+
 
 Description
 
-![image](https://github.com/user-attachments/assets/3a54ba69-b2aa-4443-ad9b-d18ab5fbde02)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/759be7e4-4d08-449e-a6e4-1cf4ae894d77" />
+
 
 
 Provide the Git URL
 
-![image](https://github.com/user-attachments/assets/1fb7b83f-3bba-411b-aad9-a725f25d3e1c)
+https://github.com/srinfotechbatch3/spring-petclinic.git
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3fdcb434-bd51-4b75-937b-febb013e5b31" />
+
 
 
 Branch buiild
 
-![image](https://github.com/user-attachments/assets/71aec8f1-4783-4e97-97cb-232dd18811ae)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4ba819e5-f109-4dea-8906-7ea252435297" />
+
 
 POLL SCM:: * * * * *
 
 every minute build was trigger when new commits happend in github repository
 
-![image](https://github.com/user-attachments/assets/d6ab7a34-156a-4430-9d40-31e362ad23b1)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b8228751-5212-41f6-a7a5-cdca52d94afc" />
 
 
-Build Steps::
+Crone Job URL::
+==================
 
-![image](https://github.com/user-attachments/assets/4aae78af-d217-41de-a1e6-16bfe2e34472)
+https://crontab.guru/examples.html
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8de3a3f9-a60e-4926-b10a-edc719724940" />
+
+
+
+Build Steps----> select Invoke top-level Maven targets
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c6c30305-7713-4180-b717-00bb1b76527c" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/460714dc-e89c-4ad1-aa73-a4a91ec74938" />
+
+Click Save
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/91fdc2ce-42c2-437a-aafb-8f881133b9bc" />
+
+
+NOTE:: 
+==========
+
+Please Modified any code in project and push those changes to Github Repository , make sure should Enbaled POLL SCM then Automatic Build happend every new Commits.
+
+POLL SCM:: * * * * *
+
+every minute build was trigger when new commits happend in github repository
+
+
+
+LAB Practice::
+=============
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3
+$ git clone git@github.com:srinfotechbatch3/spring-petclinic.git
+Cloning into 'spring-petclinic'...
+remote: Enumerating objects: 10774, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 10774 (delta 5), reused 4 (delta 4), pack-reused 10767 (from 2)
+Receiving objects: 100% (10774/10774), 7.85 MiB | 527.00 KiB/s, done.
+Resolving deltas: 100% (4049/4049), done.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3
+$ cd spring-petclinic
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (main)
+$ git checkout feature/2025.08.12
+error: pathspec 'feature/2025.08.12' did not match any file(s) known to git
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (main)
+$ git pull
+From github.com:srinfotechbatch3/spring-petclinic
+ * [new branch]      feature/2025.08.12 -> origin/feature/2025.08.12
+Already up to date.
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (main)
+$ git checkout feature/2025.08.12
+branch 'feature/2025.08.12' set up to track 'origin/feature/2025.08.12'.
+Switched to a new branch 'feature/2025.08.12'
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git status
+On branch feature/2025.08.12
+Your branch is up to date with 'origin/feature/2025.08.12'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pom.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git status
+On branch feature/2025.08.12
+Your branch is up to date with 'origin/feature/2025.08.12'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   pom.xml
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git commit -m "updated pom.xml for artifacts formates"
+[feature/2025.08.12 e1bd446] updated pom.xml for artifacts formates
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch3/spring-petclinic.git
+   30aab0a..e1bd446  feature/2025.08.12 -> feature/2025.08.12
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git status
+On branch feature/2025.08.12
+Your branch is up to date with 'origin/feature/2025.08.12'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pom.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git status
+On branch feature/2025.08.12
+Your branch is up to date with 'origin/feature/2025.08.12'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   pom.xml
+
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git commit -m "reverted the artifact formate"
+[feature/2025.08.12 ac7172d] reverted the artifact formate
+ 1 file changed, 1 deletion(-)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 295 bytes | 24.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch3/spring-petclinic.git
+   e1bd446..ac7172d  feature/2025.08.12 -> feature/2025.08.12
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git add --all
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git commit -m "reverted the artifact formate"
+[feature/2025.08.12 90cfd57] reverted the artifact formate
+ 1 file changed, 1 insertion(+)
+
+HP@DESKTOP-3GU6R56 MINGW64 ~/Downloads/SR INFOTECH Batch3/spring-petclinic (feature/2025.08.12)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:srinfotechbatch3/spring-petclinic.git
+   ac7172d..90cfd57  feature/2025.08.12 -> feature/2025.08.12
 
 
