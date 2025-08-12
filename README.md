@@ -1484,3 +1484,128 @@ Buils is Inprogress
 
 
 
+
+12/08/2025::
+=================
+
+Please find the Project Github URL's::
+====================================
+
+Spring-Petclininc::
+
+https://github.com/srinfotechbatch3/spring-petclinic.git
+
+Onlinebookstore::
+
+https://github.com/srinfotechbatch3/onlinebookstore.git
+
+
+Please try to create the New Job in Jenkins for Onlinebookstore Project and do the Build::
+=========================================================================================
+
+steps::
+
+Configuration stages::
+
+1.General
+
+2.Source code management (SCM)
+
+3.Triggres
+
+4.Environment
+
+5.Build Steps
+
+6.Post Build Actions
+
+
+
+Click New Item
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e8a51a17-f3f8-4719-95f0-551ad8e2fb4f" />
+
+Enter Description
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f567edc3-95b2-4719-b331-8e7d5663dd0d" />
+
+
+Provide the Repository URL
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a48dc090-ed74-4765-814e-edb68d495ec5" />
+
+Provide the Specific Branch
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8cf5ff7b-0286-40a9-8c91-eb05cd6f2f1a" />
+
+
+Build Steps----> select Invoke top-level Maven targets
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c6c30305-7713-4180-b717-00bb1b76527c" />
+
+
+Click Save
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/91fdc2ce-42c2-437a-aafb-8f881133b9bc" />
+
+
+Click Build Now
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3403704e-5790-427a-aac4-0d0c2df86a20" />
+
+
+Build is Inprogress
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c59da0f-85f4-4265-8979-a50536fc23af" />
+
+
+
+Poll SCM ::
+=================
+
+Jenkins server ask git if there is any changes in git server or not, if changes there Jenkins server build/package the changes , every change build happened like 5 mints ,means every 5 minutes verify the Jenkins server to git if there is any changes 
+
+
+<img width="1118" height="641" alt="image" src="https://github.com/user-attachments/assets/39aa389b-fecf-4ea6-aa46-7fbe42ef5b58" />
+
+
+
+POLL SCM ----* * * * * --every minute when every commit 
+
+
+
+Create one sample POLL SCM jenkins job::
+===========================================
+Go to jenkins Dashboard
+click New Item
+
+![image](https://github.com/user-attachments/assets/1c62657f-935b-4eed-b032-08842fb09a57)
+
+Description
+
+![image](https://github.com/user-attachments/assets/3a54ba69-b2aa-4443-ad9b-d18ab5fbde02)
+
+
+Provide the Git URL
+
+![image](https://github.com/user-attachments/assets/1fb7b83f-3bba-411b-aad9-a725f25d3e1c)
+
+
+Branch buiild
+
+![image](https://github.com/user-attachments/assets/71aec8f1-4783-4e97-97cb-232dd18811ae)
+
+POLL SCM:: * * * * *
+
+every minute build was trigger when new commits happend in github repository
+
+![image](https://github.com/user-attachments/assets/d6ab7a34-156a-4430-9d40-31e362ad23b1)
+
+
+Build Steps::
+
+![image](https://github.com/user-attachments/assets/4aae78af-d217-41de-a1e6-16bfe2e34472)
+
+
+
