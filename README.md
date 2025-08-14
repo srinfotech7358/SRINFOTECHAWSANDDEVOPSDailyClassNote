@@ -1804,6 +1804,7 @@ H/15 * * * *   ----this build happened every 5 minutes without commits ,if chang
 Please create a New Jenkins jobs both POLL SCM & Build Periodically 
 
 https://github.com/srinfotechbatch2/spring-petclinic.git
+
 https://github.com/srinfotechbatch2/onlinebookstore.git
 
 Automatically Discard Old Builds:::
