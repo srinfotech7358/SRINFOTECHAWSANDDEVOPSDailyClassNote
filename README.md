@@ -2495,13 +2495,15 @@ The Pipeline: Stage View plugin is a visualization tool in Jenkins that allows u
 
 Click the Build Now and we can triggered the pipeline
 
-![image](https://github.com/user-attachments/assets/4e211efb-fafe-4598-b29c-bb4bd5d488f2)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d267dd02-3b7e-48eb-bf13-142e3edd4bf1" />
 
-![image](https://github.com/user-attachments/assets/04315f1c-44ff-4078-952b-38320fec68c8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c264b007-283b-439f-a9fc-913ac56bed0c" />
+
 
 Success all the stages & Steps
 
-![image](https://github.com/user-attachments/assets/318c9d53-56fc-4815-9205-74d4dac0bf28)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/82c6c941-91df-4313-8107-dc9115df3bd6" />
+
 
 
 Key elements in the declarative pipeline:::
