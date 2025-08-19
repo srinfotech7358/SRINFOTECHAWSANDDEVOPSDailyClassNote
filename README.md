@@ -2516,3 +2516,211 @@ stages: Defines the different steps or stages in the pipeline (e.g., Build, Test
 
 steps: Commands to be executed in each stage.
 
+
+
+
+
+
+19/08/2025::
+===============
+
+
+Please try to create one pipeline job in jenkinsfile and execute the below Declarative pipeline example:;
+
+pipeline {
+
+agent any
+
+stages {
+    stage('Clone') {
+        steps {
+            git branch: 'main', url: 'https://github.com/srinfotech7358/spring-petclinic.git'
+        }
+    }
+    
+      stage('Build') {
+        steps {
+           bat 'mvn clean install'
+        }
+    }
+      stage('Test') {
+        steps {
+           bat 'mvn test'
+        }
+    }
+    
+      stage('Generate Junit Test Results') {
+        steps {
+           junit 'target/surefire-reports/*.xml'
+        }
+    }
+    
+      stage('Generate Artifacts') {
+        steps {
+           archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+        }
+    }
+}
+}
+
+
+See test results & antifactory ::
+================================
+
+archive the artifact :: target/*.jar
+
+Junit test results:: target/surefire-reports/*.xml
+
+![image](https://github.com/user-attachments/assets/0649e7f3-4c6e-4767-8588-d561c5f9e685)
+
+
+Pipeline as Code::
+===================
+
+Both declarative and scripted pipelines are stored as Jenkinsfiles, which you place in your source code repository. This allows you to version control your pipeline and keep it aligned with your application code.
+
+![image](https://github.com/user-attachments/assets/7d3b20e8-e72f-41ff-94ce-0c912f51a93d)
+
+![image](https://github.com/user-attachments/assets/edd96e0c-ac4d-438e-8a5b-97ae99ed1fda)
+
+
+
+
+Pipeline as Code::
+==================
+Both declarative and scripted pipelines are stored as Jenkinsfiles, which you place in your source code repository. This allows you to version control your pipeline and keep it aligned with your application code.
+
+Declarative pipeline with Jenkinsfile::
+===============================
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'git@github.com:parasa7358/spring-petclinic.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn package'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('Test Results Reports') {
+            steps {
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
+        
+        stage('Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+
+This pipeline:::
+
+1 Checks out the source code from your Git repository.
+
+2. Builds the project using Maven.
+   
+3.Runs unit tests.
+
+4.Deploys the application using a custom script.
+
+JOb creation::
+
+![image](https://github.com/user-attachments/assets/dacaf03a-5557-44ce-88ba-0b230ed061cb)
+
+Branches to build
+
+![image](https://github.com/user-attachments/assets/64065ba7-534e-4771-a667-00d5f64e5a4b)
+
+Script Path::: This path is Jenkinsfiles where we maintained in github source code level
+
+![image](https://github.com/user-attachments/assets/3b4783f0-c613-45d1-81a7-00712a79f5ad)
+
+
+Scripted pipeline with Jenkinsfile::
+===============================
+
+
+node{
+
+    stage('clone'){
+        git branch: 'main', url: 'https://github.com/srinfotechbatch2/spring-petclinic.git'
+
+    }
+
+     stage('build'){
+
+        bat 'mvn clean install'
+    }
+
+     stage('Test'){
+      bat 'mvn test'
+        
+    }
+     stage('Artifacts'){
+     archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
+        
+    }
+     stage('generated test reports'){
+    junit 'target/surefire-reports/*.xml'
+        
+    }
+}
+
+
+
+![image](https://github.com/user-attachments/assets/90db8ef7-ded5-473a-bb1c-78fcd7c68f2f)
+
+
+github sourcecode jenkinsfile 
+
+![image](https://github.com/user-attachments/assets/44f93ca7-1d95-4efb-afad-cc262de61dbe)
+
+
+Difference between Declarative and Scripted pipelines::
+======================================================
+
+The difference between Declarative and Scripted pipelines in Jenkins primarily lies in syntax, structure, and ease of use. Both are used to define CI/CD workflows, but they cater to different user needs and experience levels.
+
+
+Declarative Pipeline::
+=====================
+
+
+1.Simpler, more structured syntax
+
+2.Enforces a predefined, opinionated structure (pipeline, stages, steps)
+
+3.Designed for readability and ease of use
+
+4.Introduced later to make pipelines easier for users unfamiliar with Groovy
+
+
+Scripted Pipeline::
+=======================
+
+
+1.More flexible, written in full Groovy
+
+2.Gives access to full programmatic control (e.g., loops, conditionals, custom functions)
+
+3.More complex and powerful, suited for advanced users
