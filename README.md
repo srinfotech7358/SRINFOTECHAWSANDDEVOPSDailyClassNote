@@ -2992,22 +2992,9 @@ Webhooks provide a more efficient method for triggering actions based on changes
 ![image](https://github.com/user-attachments/assets/59e3f392-4da9-4fe3-8238-d2bd2fee5fc3)
 
 
-Deploy Onlinebookstore/spring-petclinic applications to target server (Tomcat)::
-=====================================================================================================================
-
-please create one new pipeline job
-
-Provide the Description
-
-![image](https://github.com/user-attachments/assets/458b8076-ebce-4ac0-932e-64ee5a6e460b)
-
-Enabled POLL SCM
-
-![image](https://github.com/user-attachments/assets/5b5ae6d9-987a-4c54-9450-c3a89497be29)
-
-In Pipeline Section write groovy script using Declarative style 
 
 
-![image](https://github.com/user-attachments/assets/5d624b7b-9224-4d20-863f-0f3e4671916e)
+
+
 
 
