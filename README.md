@@ -2763,42 +2763,55 @@ https://tomcat.apache.org/download-90.cgi
 
 64-bit Windows zip
 
-![image](https://github.com/user-attachments/assets/bba6eafd-95c3-4963-a862-b4b97bb8cd24)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76c04708-54fb-4cce-b5f9-1ab44dbb3f40" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/45687889-b55c-433c-aa47-7be496451ec5" />
+
+
 
 after downloaded the tomcat ,we need extrack the all the files
 
-![image](https://github.com/user-attachments/assets/b2b88b1d-ef2b-4a98-9784-a5e4c3d7a8ad)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/585a1ff6-5625-4793-b365-a82797749ade" />
 
-![image](https://github.com/user-attachments/assets/f3bde035-5e36-4ab8-af12-8a0b3f6a20c1)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6e69bc25-36f7-4e96-b651-c7a389ca8b64" />
+
 
 go to bin folder
 
 C:\Users\HP\Downloads\apache-tomcat-9.0.105-windows-x64\apache-tomcat-9.0.105\bin
 
-![image](https://github.com/user-attachments/assets/6e6ffef2-c57a-40f5-8f08-4e16e8211cad)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4c4ff9e8-0c37-45cf-ae84-1ee282a9d6d9" />
+
 
 navigate to CMD--command prompt
 
 
-![image](https://github.com/user-attachments/assets/3f4ee311-5580-40ce-976c-ff4263ab3304)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f89d42cd-58c8-4b2a-9576-6329da35f272" />
+
 
 
 run the command
 
 >startup.bat
 
-![image](https://github.com/user-attachments/assets/fd4ffdc2-793f-448a-8b38-9997f67aea7c)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6e8edc41-e322-4879-9e0c-d24d65a2289f" />
+
 
 
 we can find tomcat server started
 
-![image](https://github.com/user-attachments/assets/1c229015-e118-4f25-ae64-c36d640aeed5)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a96b19b2-41a5-44c1-b1fc-6d71d1144920" />
+
 
 we can navigate to browser
 
 http://localhost:8080/
 
-![image](https://github.com/user-attachments/assets/21b3cc58-d242-4955-8e9f-5e27c626bc2d)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/14efdf7e-4a7d-4c93-8a0c-3b59f5015354" />
+
 
 
 ![image](https://github.com/user-attachments/assets/27e7023b-7544-41eb-9ed3-f04d2680d318)
@@ -2852,7 +2865,11 @@ https://stackoverflow.com/questions/7763560/401-unauthorized-error-while-logging
 tomcat-users.xml file::
 =========================
 
+
+
 ![image](https://github.com/user-attachments/assets/61a0b6ae-1e6c-47d0-8852-b226d65f38a4)
+
+
 
 
 
