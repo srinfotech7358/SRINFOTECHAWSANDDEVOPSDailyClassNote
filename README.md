@@ -3013,5 +3013,327 @@ Webhooks provide a more efficient method for triggering actions based on changes
 
 
 
+21/08/2025::
+=============
+
+
+<img width="1781" height="730" alt="image" src="https://github.com/user-attachments/assets/d538193d-f2a7-4423-aa35-99da6428b193" />
+
+
+
+Deploy Onlinebookstore/spring-petclinic applications to target server (Tomcat)::
+=====================================================================================================================
+
+please create one new pipeline job
+
+Provide the Description
+
+![image](https://github.com/user-attachments/assets/458b8076-ebce-4ac0-932e-64ee5a6e460b)
+
+Enabled POLL SCM
+
+![image](https://github.com/user-attachments/assets/5b5ae6d9-987a-4c54-9450-c3a89497be29)
+
+In Pipeline Section write groovy script using Declarative style 
+
+
+![image](https://github.com/user-attachments/assets/5d624b7b-9224-4d20-863f-0f3e4671916e)
+
+
+Generate Deploy pipeline script::
+====================================
+
+
+
+
+Script::
+=======
+
+pipeline
+{
+    agent any
+
+    tools{
+
+        maven 'maven'
+    }
+
+stages{
+stage('Git checkout'){
+
+    steps{
+
+        git branch: 'main' url: 'https://github.com/parasa7358/Petclinic.git'
+
+    }
+}
+
+stage('clean and install'){
+
+    steps{
+
+      sh 'mvn clean install'
+
+    }
+}
+
+stage('Package'){
+
+    steps{
+
+      sh 'mvn package'
+
+    }
+}
+
+stage('Archive the Artifacts'){
+
+    steps{
+
+      sh 'mvn clean install'
+    }
+    post{
+        success{
+
+            archiveArtifacts artifacts: '**target/*.war'
+        }
+    }
+
+    }
+
+
+stage('Test Cases'){
+
+    steps{
+
+      sh 'mvn test'
+
+    }
+}
+
+
+stage('Deploy to tomcat server'){
+
+    steps{
+
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH', war: '**/*.war'
+
+    }
+}
+
+}
+}
+
+
+Run the job
+
+
+![image](https://github.com/user-attachments/assets/f240a720-41dd-4bc0-955d-a247b1cf8918)
+
+![image](https://github.com/user-attachments/assets/369955cf-0f1c-4ae1-bae3-3870edc0e282)
+
+Integrate Jenkins with Tomcat using Declarative Approach::
+=========================================================
+
+
+
+To integrate Jenkins with Tomcat using the Declarative Pipeline approach, you'll be using Jenkins Pipeline syntax to automate the deployment process to a Tomcat server. This process typically involves building the application, packaging it, and then deploying it to Tomcat.
+
+1. Jenkinsfile Configuration (Declarative Pipeline)
+
+In your Jenkins project, you'll create a Jenkinsfile, which contains the Declarative Pipeline syntax. This file defines the steps involved in the CI/CD pipeline.
+
+Please execute below script in jenkins pipeline job using Declarative style
+
+
+Project URL::
+====================
+
+https://github.com/parasa7358/Petclinic.git
+
+Declarative pipeline Script::
+================================
+
+
+pipeline
+{
+    agent any
+
+    tools{
+
+        maven 'maven'
+    }
+
+stages{
+stage('Git checkout'){
+
+    steps{
+
+        git branch: 'feature/2025.03.12', url: 'https://github.com/parasa7358/Petclinic.git'
+
+    }
+}
+
+stage('clean and install'){
+
+    steps{
+
+      sh 'mvn clean install'
+
+    }
+}
+
+stage('Package'){
+
+    steps{
+
+      sh 'mvn package'
+
+    }
+}
+
+stage('Archive the Artifacts'){
+
+    steps{
+
+      sh 'mvn clean install'
+    }
+    post{
+        success{
+
+            archiveArtifacts artifacts: '**target/*.war'
+        }
+    }
+
+    }
+
+
+stage('Test Cases'){
+
+    steps{
+
+      sh 'mvn test'
+
+    }
+}
+
+
+stage('Deploy to tomcat server'){
+
+    steps{
+
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH', war: '**/*.war'
+
+    }
+}
+
+}
+}
+
+
+Onlinebookstore::
+==================
+
+Project URL::
+================
+
+https://github.com/srinfotech7358/onlinebookstore.git
+
+Pipeline Script::
+===================
+
+
+
+ pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'master', url: 'https://github.com/srinfotech7358/onlinebookstore.git'
+            }
+        }
+        
+          stage('Build') {
+            steps {
+               bat 'mvn clean install'
+            }
+        }
+         stage('Generate Artifacts') {
+            steps {
+               archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+
+          stage('Deploy to Tomcat Server') {
+            steps {
+               deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'SR INFOTECH SOLUTIONS PVT LIMITED', war: 'target/*.war'
+            }
+        }
+    }
+}
+
+
+DevOps Web Project::
+======================
+
+Project URL::
+================
+
+https://github.com/srinfotechbatch3/devOpsWeb.git
+
+
+Pipeline Script::
+===================
+
+
+
+ pipeline {
+    agent any
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'master', url: 'https://github.com/srinfotechbatch3/devOpsWeb.git'
+            }
+        }
+        
+          stage('Build') {
+            steps {
+               bat 'mvn clean install'
+            }
+        }
+         stage('Generate Artifacts') {
+            steps {
+               archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+            }
+        }
+
+          stage('Deploy to Tomcat Server') {
+            steps {
+               deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'DevOpsWeb', war: 'target/*.war'
+            }
+        }
+    }
+}
+
+
+ABove All 3 Projects are Deployed to Target Tomcat server Successfull using both Declarative & Scripted Approaches
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00dd6bdc-bc26-4558-98e7-7fec40699bd0" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f8c217f-1dea-4a2b-8265-2898525455cd" />
+
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3a54c903-0f2c-4d84-b20b-41b56c85cb39" />
+
+
+
+
 
 
