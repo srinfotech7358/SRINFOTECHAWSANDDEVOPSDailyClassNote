@@ -3359,8 +3359,44 @@ https://gist.github.com/dmancloud/0abf6ad0cb16e1bce2e907f457c8fce9
 default U/P ---admin/admin
 
 
-![image](https://github.com/user-attachments/assets/f248e676-0498-4286-b7b0-43f78bddabd2)
+<img width="1783" height="747" alt="image" src="https://github.com/user-attachments/assets/14babfa3-f726-4abc-9d1c-6564165d8b4c" />
 
+
+
+Introduction to SonarQube::
+================================
+
+SonarQube is an open-source platform developed by SonarSource that is used for continuous inspection of code quality. It helps developers and development teams identify bugs, code smells, vulnerabilities, and duplication in their codebases across multiple programming languages.
+
+Key Features of SonarQube
+Static Code Analysis
+SonarQube analyzes source code without executing it, detecting issues like:
+
+Bugs
+
+Vulnerabilities
+
+Code smells (bad design or coding practices)
+
+Duplications
+
+Technical debt
+
+
+Sonarqube Integrate With Jenkins::
+==================================
+
+<img width="1852" height="758" alt="image" src="https://github.com/user-attachments/assets/cfe5963b-e3af-42e4-bdf4-a5825c65f72c" />
+
+Sonarqube installed link::
+
+https://gist.github.com/dmancloud/0abf6ad0cb16e1bce2e907f457c8fce9
+
+default U/P ---admin/admin
+
+default port number:: 9000
+
+Server URL: URL to your SonarQube instance (e.g., http://localhost:9000). and default port is 9000
 
 To integrate SonarQube with Jenkins, you need to ensure that Jenkins can communicate with your SonarQube server to perform static code analysis during your CI/CD pipeline. This will allow you to analyze your code quality and get reports from SonarQube as part of your build process.
 
@@ -3376,6 +3412,11 @@ Install it and restart Jenkins.
 
 2. Configure SonarQube in Jenkins
 Next, you need to configure SonarQube on Jenkins so it can communicate with your SonarQube server.
+
+
+
+11/07/2025::
+=============
 
 Steps:
 =====
@@ -3455,15 +3496,11 @@ mvn clean verify sonar:sonar \
   -Dsonar.token=sqp_0eb364758c5186bea4077eff841ddb99ba89a3ab
 
 
-29/05/2025::
-===============
 
  IntegrateSonarqubeWithJenkins::
   ==================================
 
-  Go To jenkins and 
-  
-  create new job IntegrateSonarqubeWithJenkins
+  Go To jenkins and create new job IntegrateSonarqubeWithJenkins
 
   ![image](https://github.com/user-attachments/assets/dc7d3f1e-5852-4288-bf00-5537b6a4935c)
 
@@ -3479,7 +3516,6 @@ pipeline
     }
 
 stages{
-
 stage('Git checkout'){
 
     steps{
@@ -3552,7 +3588,7 @@ stage('Deploy to tomcat server'){
 
     steps{
 
-      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'SRINFOTECH Solutions Pvt Ltd', war: '**/*.war'
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9credentials', path: '', url: 'http://localhost:8080/')], contextPath: 'Ifocus Solutions Pvt Ltd', war: '**/*.war'
 
     }
 }
@@ -3562,10 +3598,10 @@ stage('Deploy to tomcat server'){
 
 
 
+ 
+
 1. please start Jenkins on your machine & make sure Jenkins server is UP & Running state
-
 2. please start Tomcat on your machine & make sure Tomcat server is UP & Running state
-
 3. please start Sonarqube on your machine & make sure Sonarqube server is UP & Running state
 
 once above steps done then we can execute below script
@@ -3704,34 +3740,21 @@ this is your own quality gates
 ![image](https://github.com/user-attachments/assets/dab980c2-3767-4d6b-867a-03b423593323)
 
 nditions on New Code
-
 Metric
-
 Operator
-
 Value
-
 Issues
-
 is greater than
-
 0
-
 Security Hotspots Reviewed
-
 is less than
-
 100%
-
 Coverage
-
 is less than
-
 80.0%
 
 
 Duplicated Lines (%)
-
 is greater than
 
 
