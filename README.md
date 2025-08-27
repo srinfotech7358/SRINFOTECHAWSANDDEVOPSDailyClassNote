@@ -3865,8 +3865,8 @@ Jfrog Artifactory Overview::
 JFrog Artifactory is a universal artifact repository manager that serves as a central hub for storing, managing, and distributing software artifacts, binaries, packages, and other assets throughout the software development lifecycle, improving automation, and ensuring release integrity.
 
 
+<img width="1745" height="762" alt="image" src="https://github.com/user-attachments/assets/0b25b0ad-4890-4486-987b-6d5e3ec7d6b4" />
 
-<img width="1787" height="767" alt="image" src="https://github.com/user-attachments/assets/8d5b9a86-4be3-499e-bb05-1abd92be89db" />
 
 
 
@@ -3906,7 +3906,8 @@ Integrate Jfrog with Jenkins::
 First Step:: 
 https://jfrog.com/download-jfrog-platform/  ---download url
 
-![image](https://github.com/user-attachments/assets/6ef7f0ee-d89e-4c84-8764-17bcde0c18b3)
+<img width="1745" height="762" alt="image" src="https://github.com/user-attachments/assets/91fd2e3d-5e50-4b90-a7eb-8a6266126a0e" />
+
 
 previous versions link
 
