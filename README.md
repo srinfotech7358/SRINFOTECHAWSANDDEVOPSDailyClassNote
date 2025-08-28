@@ -3929,3 +3929,264 @@ artifactory-oss-6.12.1
 All zip version and search 6.12.1 OSS version
  
 https://releases.jfrog.io/artifactory/bintray-artifactory/
+
+
+
+28/08/2025::
+==============
+
+
+jdk compatibility version with jfrog is::
+=============================================
+ 
+JDK 12.1.0
+ 
+https://www.oracle.com/in/java/technologies/javase/jdk12-archive-downloads.html
+ 
+artifactory-oss-6.12.1
+ 
+All zip version and search 6.12.1 OSS version
+ 
+https://releases.jfrog.io/artifactory/bintray-artifactory/
+
+
+Jfrog Script::
+===============
+
+stage ('Artifactory Server'){
+            steps {
+               rtServer (
+                 id: "Artifactory",
+                 url: 'http://localhost:8081/artifactory',
+                 username: 'admin',
+                  password: 'password',
+                  bypassProxy: true,
+                   timeout: 300
+                        )
+            }
+        }
+        stage('Upload'){
+            steps{
+                rtUpload (
+                 serverId:"Artifactory" ,
+                  spec: '''{
+                   "files": [
+                      {
+                      "pattern": "*.war",
+                      "target": "srinfotech-batch3"
+                      }
+                            ]
+                           }''',
+                        )
+            }
+        }
+        stage ('Publish build info') {
+            steps {
+                rtPublishBuildInfo (
+                    serverId: "Artifactory"
+                )
+            }
+        }
+
+
+installed plugin for artifactory (Jfrog)::
+ =====================================
+
+
+![image](https://github.com/user-attachments/assets/542a6be0-9059-4935-9658-81ce27634337)
+
+After installed Artifactory plugin 
+
+Go to Manage Jenkins--> System configuration find JFROG
+
+ ![image](https://github.com/user-attachments/assets/5ddbd986-aaee-478b-8a03-e117f53a7b3a)
+
+Click JFrog Platform Instances
+
+![image](https://github.com/user-attachments/assets/c176ad14-5982-4ea3-b960-468d00f851c7)
+
+For user name and password
+
+
+Default Jfrog U/P----admin/password
+
+![image](https://github.com/user-attachments/assets/83204f3d-bf7b-4bd5-b616-61eaf03ae216)
+
+
+![image](https://github.com/user-attachments/assets/2af4f08d-5778-4517-8b90-43037eb6ecce)
+
+
+![image](https://github.com/user-attachments/assets/c104f1c1-6cd0-4911-8eef-b9243a2dd41f)
+
+
+I need to setup target in Jfrog
+
+srinfotech-batch3
+
+click Local repository
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/53f74cd8-b34c-4063-a434-52f1f648836c" />
+
+
+
+Select maven
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/46cdec7f-4326-4b0f-86cb-45370397bec2" />
+
+
+Repository key  :::: srinfotech-batch3
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3aa08db9-d518-49d5-bb31-2d4fda2650a3" />
+
+
+Click save and finish
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/67d49f71-cbaa-40ff-93aa-90e5454a9f23" />
+
+
+
+Go to artifacts and check repository is created with name -srinfotech-batch3
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9b2e35b7-ec96-48a2-bbbf-a182ba295dad" />
+
+
+
+CI/CD all tools ans stages script:: create new job in jenkins and execute below script 
+=====================================
+
+
+pipeline{
+agent any
+ 
+tools{
+ 
+    maven 'Maven'
+}
+ 
+stages{
+    stage('Clone The Project'){
+        steps{
+            git branch: 'main', url: 'https://github.com/srinfotechbatch2/Petclinic.git'
+        }
+    }
+    stage('Build'){
+        steps{
+             bat 'mvn clean install'
+        }
+    }
+     stage('Test'){
+        steps{
+             bat 'mvn test'
+        }
+    }
+     stage('Generated the test reports'){
+        steps{
+             junit 'target/surefire-reports/*.xml'
+        }
+    }
+     stage('published the Artifacts'){
+        steps{
+            archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
+        }
+    }
+ 
+    stage('SonarQube Analysis'){
+        steps{
+        bat 'mvn package'
+      bat '''mvn sonar:sonar \
+  -Dsonar.projectKey=spring-petclinic \
+  -Dsonar.projectName='spring-petclinic' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_b4f05b06814df65b8d3f1a46'''
+        }
+    }
+ 
+stage ('Artifactory Server'){
+
+            steps {
+            
+               rtServer (
+               
+                 id: "Artifactory",
+                 
+                 url: 'http://localhost:8081/artifactory',
+                 
+                 username: 'admin',
+                 
+                  password: 'password',
+                  
+                  bypassProxy: true,
+                  
+                   timeout: 300
+                   
+                        )
+            }
+            
+        }
+        stage('Upload'){
+        
+            steps{
+            
+                rtUpload (
+                
+                 serverId:"Artifactory" ,
+                 
+                  spec: '''{
+                  
+                   "files": [
+                   
+                      {
+                      
+                      "pattern": "*.war",
+                      
+                      "target": "srinfotech-batch3"
+                      
+                      }
+                      
+                            ]
+                            
+                           }''',
+                           
+                        )
+            }
+            
+        }
+        stage ('Publish build info') {
+        
+            steps {
+            
+                rtPublishBuildInfo (
+                
+                    serverId: "Artifactory"
+                )
+                
+            }
+            
+        }
+ 
+ 
+    
+    stage('Deploy to Tomcat Server'){
+    
+        steps{
+        
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcatcredential', path: '', url: 'http://localhost:8080')], contextPath: 'SRInfotechSpringpetclinicJfrog', war: 'target/*.war'
+        }
+
+        
+    }
+    
+}
+
+}
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1ed5c92a-cc09-4cd4-80da-1e4eb7ec0596" />
+
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/408c9aa6-882f-46cc-942e-1fa4f0d45e86" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d1ad9cc6-6657-48c7-b657-7e814b79ba02" />
