@@ -4366,37 +4366,48 @@ we have already .pem file dowloaded in you local machin
 right click from .pem and click Open git bash here option
 Now Go to AWS Ubuntu machine which is already created in AWS insatnces and select master machine
 
-![image](https://github.com/user-attachments/assets/ae110666-3e1d-4a48-bfb4-ecb3790187f8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/69c4bd3c-fb96-4e34-93ce-bb3ab176f5e4" />
+
 
 Click Connect
 
-![image](https://github.com/user-attachments/assets/4130c330-b01d-4a7c-b820-7b836db556b9)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/608b56e0-275b-4854-a135-2f54886dd0ea" />
+
 
 Click SSH Client
 
-![image](https://github.com/user-attachments/assets/fb0dfc0d-abbe-427c-a79b-a10df2f2410c)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5cf59bd9-ec79-446c-96eb-e36e05c17a2a" />
+
 
 Copy URL
 
 >ssh -i "Batch2.pem" ubuntu@ec2-18-237-178-192.us-west-2.compute.amazonaws.com
 
-![image](https://github.com/user-attachments/assets/a0bf53d1-3b1a-42a0-8c40-8cb39f85cd09)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e5cd3cef-ad51-4604-8e02-b74981dec51c" />
+
 
 Now past that url in Gitbash
 
-![image](https://github.com/user-attachments/assets/e52355e5-73b3-4d7b-9e04-3ce8cd72ffe5)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/327cb240-6f1f-4b6a-8db5-718510aab388" />
+
 
 switch to root user below command run
+
 >Sudo -i
 
-![image](https://github.com/user-attachments/assets/98086ebc-bbd6-4757-ac12-923a2a6eb896)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/47049e39-538e-4a1e-8810-36c90abbed3b" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/51bd5a55-81ce-4fff-84df-f8ad2e20fedb" />
+
 
 update the all packages ,please run below command
 
 >sudo apt-get update
 
-![image](https://github.com/user-attachments/assets/3b291e76-4a2a-4d5a-bbd2-58231282e4b7)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c5486332-2033-4550-a134-c556657debfc" />
 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3b76e193-7495-4fb8-9cce-37f2a6732f16" />
 
 
 Install JDK & Maven:;
