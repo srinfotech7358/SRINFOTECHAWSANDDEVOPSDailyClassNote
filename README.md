@@ -4338,3 +4338,235 @@ instance will be created
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ae686a03-6233-4a68-88ea-688b513a4eac" />
 
+
+
+
+
+01/09/2025::
+==============
+
+
+Master & Node communication Via SSH keys::
+================================
+
+i have to create 2 EC2 ubuntu machines in AWS
+
+1. Jenkinsmaster
+
+2. Node
+
+
+
+
+<img width="1478" height="720" alt="image" src="https://github.com/user-attachments/assets/c2d9271e-ef7e-4795-a337-3a4652b49527" />
+
+
+we have already .pem file dowloaded in you local machin
+
+right click from .pem and click Open git bash here option
+Now Go to AWS Ubuntu machine which is already created in AWS insatnces and select master machine
+
+![image](https://github.com/user-attachments/assets/ae110666-3e1d-4a48-bfb4-ecb3790187f8)
+
+Click Connect
+
+![image](https://github.com/user-attachments/assets/4130c330-b01d-4a7c-b820-7b836db556b9)
+
+Click SSH Client
+
+![image](https://github.com/user-attachments/assets/fb0dfc0d-abbe-427c-a79b-a10df2f2410c)
+
+Copy URL
+
+>ssh -i "Batch2.pem" ubuntu@ec2-18-237-178-192.us-west-2.compute.amazonaws.com
+
+![image](https://github.com/user-attachments/assets/a0bf53d1-3b1a-42a0-8c40-8cb39f85cd09)
+
+Now past that url in Gitbash
+
+![image](https://github.com/user-attachments/assets/e52355e5-73b3-4d7b-9e04-3ce8cd72ffe5)
+
+switch to root user below command run
+>Sudo -i
+
+![image](https://github.com/user-attachments/assets/98086ebc-bbd6-4757-ac12-923a2a6eb896)
+
+update the all packages ,please run below command
+
+>sudo apt-get update
+
+![image](https://github.com/user-attachments/assets/3b291e76-4a2a-4d5a-bbd2-58231282e4b7)
+
+
+
+Install JDK & Maven:;
+============
+
+JDK link
+
+https://bluevps.com/blog/how-to-install-java-on-ubuntu
+
+MAven link
+
+https://phoenixnap.com/kb/install-maven-on-ubuntu
+
+
+
+>sudo apt-get install maven
+
+>java -version
+
+>mvn -v
+
+Set java home environment 
+
+>sudo vi /etc/environment
+
+JAVA_HOME=”/usr/lib/jvm/java-8-openjdk-amd64/jre”
+
+MAVEN_HOME=”/usr/share/maven”
+
+Reload your system environment
+>source /etc/environment
+
+Veriy the variables was set correctly
+>echo $JAVA_HOME
+
+>echo $MAVEN_HOME
+
+Insatll Jenkins on master machine::
+========================================
+
+https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04
+
+https://phoenixnap.com/kb/install-jenkins-ubuntu
+
+
+In AWS any machines default passwordauthentication is disabled , 
+we need to enabled in any linux machines::
+=========================================
+
+
+>sudo vi /etc/ssh/sshd_config
+
+>sudo service sshd restart
+
+In EC2 – by default password based authentication is disabled so we need to enabled::
+==================================================
+
+>sudo vi /etc/ssh/sshd_config
+
+passwordauthentication :yes
+
+![image](https://github.com/user-attachments/assets/99decb00-3ef0-4528-8e58-0d69bf14ce36)
+
+In ubuntu machine default user is not sudo user,you should make user as a sudo user
+>visudo
+
+
+# Allow members of group sudo to execute any command
+
+Jenkins ALL=(ALL:ALL) NOPASSWD:ALL
+
+>su Jenkins
+
+Switching to new user
+
+![image](https://github.com/user-attachments/assets/86bc74b0-e31f-44aa-bcab-875ed9a3a016)
+
+![image](https://github.com/user-attachments/assets/98b96a48-2ee3-466c-b917-26c1919b15f6)
+
+Once installed Jenkins successfully
+
+>we need to enabled the Inbounds and outbounds rules in AWS security groups
+
+Inbounds rules
+
+![image](https://github.com/user-attachments/assets/b7075d75-dd60-42d4-a282-7be861252685)
+
+Copy public IP address and go to browser
+Access Jenkins using Public IP address
+http://35.86.160.156:8080/
+
+bydefault Jenkins runs on port 8080
+
+Jenkins home path/var/lib/Jenkins
+
+How to change the port number in Jenkins::
+
+https://stackoverflow.com/questions/28340877/how-to-change-port-number-for-jenkins-installation-in-ubuntu-12-04
+
+>sudo nano /etc/default/jenkins
+
+
+Now Go to Node Machine::
+==============
+Please insatll JDK & Maven in node machine and setup environemnt varibles
+
+>sudo apt-get install maven
+
+>java -version
+
+>mvn -v
+
+Set java & Maven home environment::
+====================================
+
+>sudo vi /etc/environment
+
+
+1.press i from your keyboard
+
+2.press the esc from your keyboard
+
+3. shift+:
+
+4. wq
+
+5. press Enter
+
+
+
+JAVA_HOME=”/usr/lib/jvm/java-8-openjdk-amd64/jre”
+
+MAVEN_HOME=”/usr/share/maven”
+
+Reload your system environment
+
+>source /etc/environment
+
+Veriy the variables was set correctly
+
+>echo $JAVA_HOME
+/usr/lib/jvm/java-17-openjdk-amd64
+
+>echo $MAVEN_HOME
+/usr/share/maven
+
+
+
+>sudo vi /etc/ssh/sshd_config
+
+PasswordAuthentication yes
+
+NODE Machine::
+
+1.sudo adduser node
+2.user should provide the sudo permissions
+>visudo
+
+# Allow members of group sudo to execute any command
+
+node ALL=(ALL:ALL) NOPASSWD:ALL
+
+3.passwordauthentication is enabled
+
+
+NOTE::
+========
+1. user should provide the sudo permissions
+
+2. passwordauthentication should be enabled
+
+3. run any command from /root user only
+
