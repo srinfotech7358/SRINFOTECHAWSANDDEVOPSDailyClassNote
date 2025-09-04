@@ -4581,3 +4581,30 @@ NOTE::
 
 3. run any command from /root user only
 
+
+Class Note::
+===============
+
+Jenkins master::
+
+1.java & maven need install
+2.setup environemnt variabels
+3.install jenkins in master machine
+4.provide the sudo permission to the jenkins user
+5.passwordauthentication shobe enabled
+
+6.ssh-keygen -t ed25519  -->generated the privte & public keys
+
+NOTE:: if authorized_keys file is there or not, if not there you shoube be create the authrized_keys file
+
+7.copy the public/private/ keys to node machine
+
+NOTE1:: copy the public keys to authorized_keys file
+
+NOde::
+
+1.java & maven need install
+2.setup environemnt variabels
+3.need to create the user as node--->adduser node
+4.provide the sudo permission to node user
+5.passwordauthentication shobe enabled
