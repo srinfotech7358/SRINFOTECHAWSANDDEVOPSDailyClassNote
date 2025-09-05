@@ -4608,3 +4608,205 @@ NOde::
 3.need to create the user as node--->adduser node
 4.provide the sudo permission to node user
 5.passwordauthentication shobe enabled
+
+
+
+
+04/09/2025::
+==============
+
+
+Master Node Configuration::
+>got to manage Jenkins
+>manage Nodes
+>click new node
+Remote root directory
+
+![image](https://github.com/user-attachments/assets/190f9e24-2842-4462-9773-6c98c7980d77)
+
+![image](https://github.com/user-attachments/assets/10dcf0c4-7088-4071-a6e0-8f4729603029)
+ 
+ 
+
+Launch methods via ssh
+
+ ![image](https://github.com/user-attachments/assets/f25a3610-8d32-43ca-bde3-644426d37cb1)
+
+
+Add credentials ::
+
+option-1::
+
+this time please use credentials option SSH key with private key from node machine
+
+option::2 please use credentials with Username & password and let's try if you copy properly ,agent machine will conenct Successfully
+
+ ![image](https://github.com/user-attachments/assets/d54e7393-a5b9-4194-8f50-c206b02c39d1)
+
+ ![image](https://github.com/user-attachments/assets/2113f8d7-18d1-4e66-84ec-267c05fde9b5)
+
+>Host Key Verification Strategy
+
+ ![image](https://github.com/user-attachments/assets/58a7b48d-eab5-45a7-9661-1a72578ceda5)
+
+
+Agent successfully connected
+
+![image](https://github.com/user-attachments/assets/823523dc-fe3e-432c-b3d8-9c645483d30a)
+
+ 
+
+Execute Jenkins job using slave 
+Create one test slave job in Jenkins
+
+>select Restrict where this project can be run
+
+![image](https://github.com/user-attachments/assets/d6c206ac-06a1-4564-9351-7b35e4f4c521)
+
+
+>select Label Expression
+
+![image](https://github.com/user-attachments/assets/85b8897c-f6ec-4bd2-8bb9-3821251c20da)
+
+please create 2 job in jenkins master and setup 1 job in Node machine and 2nd job master machine, just trigger Build Now 
+
+Please observe below screenshot 2 job running different machines 
+
+![image](https://github.com/user-attachments/assets/94005ac8-cb37-4c97-ba0e-14adf7c71566)
+
+advantage of master & Node Integartion
+
+![image](https://github.com/user-attachments/assets/5551bbab-46b7-49ae-b6c2-093299d2ecb2)
+
+![image](https://github.com/user-attachments/assets/ac59dbc9-c012-44a0-ae98-0fbcc2d4e5d8)
+
+<img width="1252" height="740" alt="image" src="https://github.com/user-attachments/assets/71f149ea-4a13-4bed-9560-bd3da0586e9e" />
+
+
+
+24/07/2025::
+==============
+
+
+<img width="1252" height="740" alt="image" src="https://github.com/user-attachments/assets/7a62f53f-846f-45bb-8f32-008d1819238c" />
+
+
+<img width="1561" height="767" alt="image" src="https://github.com/user-attachments/assets/fcfc76ac-8e62-4c18-b894-959e513d721d" />
+
+Session NOTE:::
+===================
+
+Master & Node Communicatiion Via SSH keys::
+===========================================
+>sudo -i
+>sudo apt update
+>java --version
+>mvn -v
+
+environment setup::
+
+Maven home: /usr/share/maven
+
+>sudo apt install maven
+
+Java Home::  /usr/lib/jvm/java-17-openjdk-amd64
+
+>sudo apt install openjdk-17-jdk
+
+>sudo vi /etc/environment
+
+1.press i from your keyboard
+2.press the esc from your keyboard
+3. shift+:
+4. wq
+5. press Enter
+
+>echo $JAVA_HOME
+/usr/lib/jvm/java-17-openjdk-amd64
+
+>echo $MAVEN_HOME
+/usr/share/maven
+
+>ssh-keygen -t ed25519
+
+>su <username>
+>su jenkins
+
+>visudo
+		
+# Allow members of group sudo to execute any command
+		
+jenkins ALL=(ALL:ALL) NOPASSWD:ALL
+
+ctrl+X
+yes
+enter
+
+in aws passwordauthenticatuion is disabled , you need to enabled the passwordauthentication
+
+>sudo vi /etc/ssh/sshd_config
+
+PasswordAuthentication yes
+
+NODE Machine::
+
+1.sudo adduser node
+2.user should provide the sudo permissions
+>visudo
+
+# Allow members of group sudo to execute any command
+
+node ALL=(ALL:ALL) NOPASSWD:ALL
+
+3.passwordauthentication is enabled
+
+>sudo vi /etc/ssh/sshd_config
+>cd ~
+
+>ssh node@172.31.37.219
+
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOayYEJSyLHLOX25WbnoZgtL006XdmN6T5N0dlUnp7kI root@ip-172-31-44-252
+
+
+--2 machines
+
+1.master
+
+a.java & mavne need install
+
+b.setup environmemnt variables
+
+c.install jenkins in master machine
+
+d.provide the sudo permission to the jenkins user
+
+e. passwordauthentication should be enabled
+
+f. ssh-keygen -t ed25519 --> need to generate the keys in master
+
+g. copy the public/private keys to Node machine
+
+NOTE:: if authorized_keys file is there or not , if not there 
+
+please be create both the machine
+
+2.Node
+
+a.java & mavne need install
+
+b.setup environmemnt variables
+
+c. need to create use as node-->adduser node
+
+c.provide the sudo permission to the node user
+
+visudo 
+
+node ALL-(AAL:ALL) NOPASSWD:ALL
+
+e. passwordauthentication should be enabled
+
+if keys are copied correctly commenucation will be happend 
+
+
