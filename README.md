@@ -4588,9 +4588,13 @@ Class Note::
 Jenkins master::
 
 1.java & maven need install
+
 2.setup environemnt variabels
+
 3.install jenkins in master machine
+
 4.provide the sudo permission to the jenkins user
+
 5.passwordauthentication shobe enabled
 
 6.ssh-keygen -t ed25519  -->generated the privte & public keys
@@ -4604,9 +4608,13 @@ NOTE1:: copy the public keys to authorized_keys file
 NOde::
 
 1.java & maven need install
+
 2.setup environemnt variabels
+
 3.need to create the user as node--->adduser node
+
 4.provide the sudo permission to node user
+
 5.passwordauthentication shobe enabled
 
 
@@ -4617,20 +4625,62 @@ NOde::
 
 
 Master Node Configuration::
+
 >got to manage Jenkins
+
 >manage Nodes
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3d84ee12-6b57-4dc0-ab1e-eac986474db7" />
+
+
 >click new node
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e4fc0210-1d58-4e8d-abce-4587b78f51b5" />
+
+Give Node name
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/bb37de5b-36c4-43ac-8f06-c2fe429ccc82" />
+
+
+select Permanent Agent
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7bcfacca-9904-4d14-a5fc-6b32e8184253" />
+
+
+click create
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/980d0602-42e5-4f0f-8254-53bc39f81068" />
+
+
+
+
 Remote root directory
 
-![image](https://github.com/user-attachments/assets/190f9e24-2842-4462-9773-6c98c7980d77)
+>home/node
 
-![image](https://github.com/user-attachments/assets/10dcf0c4-7088-4071-a6e0-8f4729603029)
- 
- 
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/465a5411-d053-4daa-91a9-04f00f3ded09" />
+
 
 Launch methods via ssh
 
- ![image](https://github.com/user-attachments/assets/f25a3610-8d32-43ca-bde3-644426d37cb1)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/26c1c7df-058e-4821-b817-1ef93642a831" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/abd7b2f1-c133-4873-b6df-5a5bfb4857b3" />
+
+
+Host provide the node private ip addresss
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/76d3229f-921e-4c26-b04e-bca84abbf6f6" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/215c2022-524d-40a4-b157-f539c19410f0" />
 
 
 Add credentials ::
@@ -4639,53 +4689,93 @@ option-1::
 
 this time please use credentials option SSH key with private key from node machine
 
-option::2 please use credentials with Username & password and let's try if you copy properly ,agent machine will conenct Successfully
 
- ![image](https://github.com/user-attachments/assets/d54e7393-a5b9-4194-8f50-c206b02c39d1)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04453cef-b083-4f10-928c-ba4dbb2547c3" />
 
- ![image](https://github.com/user-attachments/assets/2113f8d7-18d1-4e66-84ec-267c05fde9b5)
 
->Host Key Verification Strategy
+select SSH key with private key
 
- ![image](https://github.com/user-attachments/assets/58a7b48d-eab5-45a7-9661-1a72578ceda5)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/be6f565c-3e3c-4c39-90c5-ba9a95451573" />
+
+
+provide the ID & Deccription
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b2fa28bd-70ee-4cca-800e-a7e6ae010bd2" />
+
+User Name------> node machine user name
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8201cb00-e148-43e1-ac2c-011f5ad2c3fd" />
+
+select private key
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7663c7ac-53bc-432c-8c75-ebe36c20d204" />
+
+give the private key of node machine
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6bf4b79e-c102-4863-8773-356cc80e6410" />
+
+
+click Add
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/27ffaf4c-f2db-49fa-9917-a02cac410e0f" />
+
+
+click save
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4a97cc27-f023-4ffb-a33b-20c96bf2a9c7" />
+
+
 
 
 Agent successfully connected
 
-![image](https://github.com/user-attachments/assets/823523dc-fe3e-432c-b3d8-9c645483d30a)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8262c42d-3cc0-4152-935b-62849c13db8c" />
 
  
 
-Execute Jenkins job using slave 
+Execute Jenkins job using slave /node/agent/worker/helper 
+
 Create one test slave job in Jenkins
 
 >select Restrict where this project can be run
 
-![image](https://github.com/user-attachments/assets/d6c206ac-06a1-4564-9351-7b35e4f4c521)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/287a541a-e97c-4756-97ab-560efef29c0e" />
 
 
 >select Label Expression
 
-![image](https://github.com/user-attachments/assets/85b8897c-f6ec-4bd2-8bb9-3821251c20da)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ed5a566d-0b91-43e3-94e3-774cc2b14159" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/780c0899-4ea6-4407-a2db-4b6744f4da44" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5f5004e8-5aeb-4c64-98db-f0985491a173" />
+
 
 please create 2 job in jenkins master and setup 1 job in Node machine and 2nd job master machine, just trigger Build Now 
 
 Please observe below screenshot 2 job running different machines 
 
-![image](https://github.com/user-attachments/assets/94005ac8-cb37-4c97-ba0e-14adf7c71566)
+Building on the built-in node in workspace /var/lib/jenkins/workspace/master
 
-advantage of master & Node Integartion
+Building remotely on SRInfotechNode in workspace /home/node/workspace/sample
 
-![image](https://github.com/user-attachments/assets/5551bbab-46b7-49ae-b6c2-093299d2ecb2)
-
-![image](https://github.com/user-attachments/assets/ac59dbc9-c012-44a0-ae98-0fbcc2d4e5d8)
-
-<img width="1252" height="740" alt="image" src="https://github.com/user-attachments/assets/71f149ea-4a13-4bed-9560-bd3da0586e9e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2eadd4d0-eab0-4b06-a0ca-50a50f57ae6a" />
 
 
+advantage of master & Node Integration
 
-24/07/2025::
-==============
+
+<img width="1292" height="737" alt="image" src="https://github.com/user-attachments/assets/8420c354-0336-483a-a6d2-e96cc7685173" />
+
 
 
 <img width="1252" height="740" alt="image" src="https://github.com/user-attachments/assets/7a62f53f-846f-45bb-8f32-008d1819238c" />
@@ -4810,3 +4900,51 @@ e. passwordauthentication should be enabled
 if keys are copied correctly commenucation will be happend 
 
 
+
+Ansible:: Configuration Mamagement Tool(CM)::
+==============================================
+
+Ansible is an open-source automation tool used for configuration management, application deployment, task automation, and multi-node orchestration. It helps system administrators and DevOps professionals automate IT processes to improve efficiency, reduce errors, and simplify complex workflows.
+
+
+<img width="1690" height="744" alt="image" src="https://github.com/user-attachments/assets/b36c3691-3036-436f-a06f-811ba5b03ade" />
+
+
+Key Features of Ansible:
+================
+Agentless: Ansible doesn't require any agents to be installed on the target machines. It uses SSH (or WinRM for Windows systems) to communicate with remote nodes.
+
+Declarative Syntax: Ansible uses YAML (Yet Another Markup Language) to define the tasks, which makes it easy to read and write.
+
+Idempotent: Ansible ensures that running the same playbook multiple times has the same effect, meaning it won’t reapply configurations if they’ve already been applied correctly.
+
+Modular: Ansible has a large number of pre-built modules that can be used to manage various systems, applications, and services.
+
+Playbooks: These are YAML files that describe the automation tasks you want to run. Playbooks are the heart of Ansible automation and define the "what" and "how" of your automation tasks.
+
+Inventory Management: Ansible can manage an inventory of systems, which is used to organize and target different sets of machines.
+
+Basic Components:
+==================
+Inventory: A list of hosts (machines) that Ansible will manage.
+
+Playbook: A YAML file that defines the tasks and roles to be applied to the inventory.
+
+Roles: A way to group related tasks and files together in a reusable manner.
+
+Modules: Pre-built commands that Ansible can run on target systems to accomplish specific tasks (e.g., file management, system configuration, etc.).
+
+3 linux ubuntu machines
+
+AWS_Ubuntu 24
+
+1)	AWS free tier
+
+a)ACS   ----Ansible control server
+
+b)Node1
+
+c)Node2
+
+
+all these 3 machine ping to each other
