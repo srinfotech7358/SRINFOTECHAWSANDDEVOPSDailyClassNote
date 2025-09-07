@@ -4948,3 +4948,303 @@ c)Node2
 
 
 all these 3 machine ping to each other
+
+
+
+
+
+05/09/2025::
+================
+
+
+Ansible Control Server(ACS):: steps
+============================
+
+<img width="292" height="244" alt="image" src="https://github.com/user-attachments/assets/4121fe3b-97b2-43bd-ac04-afa213b14d36" />
+
+
+Ansible Install LInk
+
+https://www.cherryservers.com/blog/install-ansible-ubuntu-24-04
+
+
+ACS::ansible control server
+===========================
+
+Please follow the below steps to setup ACS
+
+1.install ansible
+
+2. passwordauthentication enabled
+
+3. create new user --->adduser ansible
+
+4. user should provide the sudo permission
+
+5. Generate the private & public keys --> ssh-keygen -t ed25519  
+
+6.copy the public/private keys to Node machines
+
+if keys are copied correctly commenucation will be happend 
+
+NOTE1 setup::steps
+==========
+
+Please follow the below steps to setup ACS
+
+1.install python
+
+2. passwordauthentication enabled
+
+3. create new user --->adduser node1
+
+4. user should provide the sudo permission
+
+NODE2 Setup::steps
+=========================
+
+Please follow the below steps to setup ACS
+
+1.install python
+
+2. passwordauthentication enabled
+
+3. create new user --->adduser node2
+
+4. user should provide the sudo permission
+
+<img width="286" height="372" alt="image" src="https://github.com/user-attachments/assets/284d66db-b34b-4df0-bee4-3abc2ed651b8" />
+
+we can search in google ansible playbook
+https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#basics
+
+Python Install link::
+
+https://docs.vultr.com/how-to-install-python-and-pip-on-ubuntu-24-04
+
+
+Steps::
+======
+ubuntu@ip-172-31-28-207:~$ sudo -i
+root@ip-172-31-28-207:~# su ansible
+ansible@ip-172-31-28-207:/root$ cd ~
+ansible@ip-172-31-28-207:~$ cd /etc/ansible/
+ansible@ip-172-31-28-207:/etc/ansible$ ansible -m ping all
+[WARNING]: Platform linux on host localhost is using the discovered Python interpreter at /usr/bin/python3.12, but future installation of
+another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+[WARNING]: Platform linux on host ansiblenode2@172.31.30.200 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+ansiblenode2@172.31.30.200 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+[WARNING]: Platform linux on host ansiblenode1@172.31.20.135 is using the discovered Python interpreter at /usr/bin/python3.12, but future
+installation of another Python interpreter could change the meaning of that path. See https://docs.ansible.com/ansible-
+core/2.17/reference_appendices/interpreter_discovery.html for more information.
+ansiblenode1@172.31.20.135 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+ansible@ip-172-31-28-207:/etc/ansible$
+
+
+
+
+Ansible Playbooks Introduction::
+==========================
+
+Ansible playbooks are the heart of automation with Ansible. They are simple YAML (Yet Another Markup Language) files that define automation tasks in a structured, human-readable format. Playbooks allow you to automate configurations, deployments, and orchestration tasks in a clear and organized way.
+
+1.what is playbook  
+
+a.playbook is a text file
+
+b.playbooks is set up of tasks
+
+c.playbook is written in YAML or YML
+
+d.each task is module
+
+e.playbook is defined values key-values pairs
+
+f.playbook is tell to the ansible , please execute the tasks
+
+g.any configuration management tools maintained a state and each module have state
+
+
+3 linux ubuntu machines::
+==========================
+
+AWS_Ubuntu 24
+1)	AWS free tier 
+
+a)ACS   ----Ansible control server
+
+b)Node1
+
+c)Node2
+
+
+
+SSHKeys::
+========= 
+
+ssh-keys re generated in ACS--Ansible control Server
+
+>ssh-keygen -t ed25519
+
+above command is private & public keys are generated 
+
+>copy public keys from ACS to Node1 & NOde2 inside the Authorized_keys files
+
+NOTE::: Please verify the all the machines ,if Authorized_keys file is present OR not . if not please create the Authorized_keys all the machines manually
+
+create file::
+=========
+>touch  Authorized_keys
+
+Inventory::
+============
+
+add the all the node machines to hosts which is Ansible installed home directory 
+
+>ubuntu@ip-172-31-6-13:~$ sudo -i
+
+root@ip-172-31-6-13:~# su ansible
+
+ansible@ip-172-31-6-13:/root$ cd ~
+
+ansible@ip-172-31-6-13:~$ cd /etc/ansible/
+
+ansible@ip-172-31-6-13:/etc/ansible$ ls
+
+ansible.cfg  hosts  roles
+
+Ansible installed Home Directory::
+======================
+>/etc/ansible/
+
+
+Verify Ping the Machines::
+============================
+
+ansible@ip-172-31-6-13:/etc/ansible$ ansible -m ping all
+[WARNING]: Platform linux on host node2@172.31.0.185 is using the discovered Python interprete
+/usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+node2@172.31.0.185 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+[WARNING]: Platform linux on host node1@172.31.11.24 is using the discovered Python interprete
+/usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+node1@172.31.11.24 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+[WARNING]: Platform linux on host ansible@172.31.6.13 is using the discovered Python interpret
+at /usr/bin/python3.12, but future installation of another Python interpreter could change the
+meaning of that path. See https://docs.ansible.com/ansible-
+core/2.18/reference_appendices/interpreter_discovery.html for more information.
+ansible@172.31.6.13 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.12"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+
+all these 3 machine ping to each other and see beow screenshots all 3 machines pings each other
+
+
+Key Concepts::
+==============
+
+Playbook: A playbook is a file that contains one or more "plays." Each play defines a set of tasks to be executed on a group of hosts. The playbook can be used for things like installing packages, managing users, configuring services, etc.
+
+Task: A task is an individual unit of work. Tasks define specific actions, such as installing a package, starting a service, or copying a file. Tasks are executed sequentially, in the order in which they are written in the playbook.
+
+Inventory: An inventory is a list of hosts that Ansible will manage. The inventory file defines which machines to target. An inventory can group hosts together (e.g., web servers, db servers) for easy management.
+
+Modules: Ansible provides numerous modules that are responsible for performing specific tasks like managing packages, services, files, etc. Common modules include apt, yum, service, copy, and file.
+
+
+Structure of a Basic Playbook:
+===============================
+A basic playbook has the following components:
+
+YAML Header: The file begins with a --- to indicate it’s a YAML file.
+
+ the hosts (target machines)
+ become: yes   ----->Sudo user 
+
+Tasks: Tasks define the actions to be executed on the target systems.
+
+![image](https://github.com/user-attachments/assets/71982463-6b41-4481-af94-29c76690b0b6)
+
+I want to see where the Ansible is installed on ACS
+>cd /etc/ansible
+
+NOTE::
+==========
+
+Playbook is written in YAML format
+
+Inside the playbook tasks
+
+Each task is a module
+
+Playbook is a one of yaml file
+
+Yaml file is a collection of key-value pairsset of all tasks
+
+Playbook is tell to the ansible what are the tasks can be performed
+
+Each task  one module
+
+Module is a smallest item of ansible
+
+Module can be used to individual or smallest task can be performed
+
+Any configuration management tool should maintain ‘state’
+
+
+hosts: all (apply all we can be mentioned in inventory )
+
+become: yes  (become user as a sudo user)
+
+tasks:
+
+
+we can search in google ansible playbook
+
+https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#basics
