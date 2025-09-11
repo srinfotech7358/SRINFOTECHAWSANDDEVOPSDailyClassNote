@@ -5923,3 +5923,240 @@ http://13.218.99.248/info.php
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/58969708-7c41-4a97-ac0d-7edf78dc8e37" />
 
 
+
+
+
+10/09/2025::
+============
+
+
+Setup module in ansible::
+============================
+
+
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html
+Setup module is used to collect the facts
+Facts information gather from nodes called facts
+>ansible -I hosts -m setup Webserver
+
+Using filter command
+
+>ansible -i hosts -m setup -a "filter=*os*" Webserver
+
+ansible_os_family": "Debian"
+
+Ansible when statements
+
+https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html#the-when-statement
+
+
+ansible_os_family": "Debian"
+
+When condition is always used bottom of the script and using scrips we can able to run a playbook on a different platforms 
+
+1.Debian
+
+2.Redhat
+---
+- hosts: Webserver
+
+  become: yes
+
+  tasks:
+  - name: install apache
+
+    apt:
+      name: apache2
+
+    state: present
+
+    update_cache: yes
+
+    when: ansible_os_family == "Debian"  
+  - name: install apache
+
+    yum:
+
+    name: httpd
+
+     state: present
+
+    when: ansible_os_family == "Redhat"
+
+
+
+
+In Ansible, variables are used to store values that can be referenced and used throughout your playbooks, roles, and tasks. This allows for dynamic, reusable, and flexible automation. Here’s a basic breakdown of how Ansible variables work and the different ways you can define and use them:
+
+
+define variables in 3 places
+
+1.	Inventory level  lowest priority
+
+2.	Playbook level 
+
+3.	Command line level –highest level priority
+
+
+Inventory variables: These are defined in the inventory file (or dynamic inventory) for specific hosts or groups.
+
+[webservers]
+ansiblenode1@172.31.20.135  package_name=git
+ansiblenode2@172.31.30.200 package_name=apache2
+localhost 
+
+[webservers:vars]
+ansiblenode2@172.31.30.200 
+localhost 
+
+package_name=httpd
+
+Playbook variables: You can define variables directly within your playbooks using the vars section.
+
+---
+- hosts: Webservers
+
+  become: yes
+
+  vars:
+
+  pacakge_name: git
+
+  tasks:
+    
+    - name: Install all packages
+
+      apt:
+
+      name: "{{ pacakge_name }}"
+
+      state: present
+
+      Command-line variables: You can pass variables to your playbooks at runtime using the -e or --extra-vars option.
+      
+
+      >ansible-playbook -i hosts -e "package_name=apache2" variables2.yml
+
+
+
+Ansible resolves variable values based on a specific precedence order. The order from highest to lowest precedence is:
+====================================================================================================================
+
+Extra-vars (-e on the command line): Command-line variables take the highest precedence.
+
+Playbook variables: Variables defined within the playbook.
+
+Inventory variables: Variables set in the inventory.
+
+Debug & vars & register in Ansible module::
+==========================================
+
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html
+
+---
+- name: Echo message on localhost
+
+  hosts: localhost
+
+   connection: local
+
+   gather_facts: no
+
+   vars:
+
+   message: "Hello from Ansible playbook on localhost!"
+
+  tasks:
+    
+    - name: Echo message and connection type
+
+      ansible.builtin.shell: "echo '{{ message }}' ; echo 'Connection type: {{ ansible_connection }}'"
+
+      register: echo_output
+
+    
+    - name: Display output
+
+      debug:
+
+      msg: "{{ echo_output.stdout_lines }}"
+
+
+>ansible-playbook -i hosts -vvv variable.yaml  --------> verbose logs purpose ,please run this command
+
+
+![image](https://github.com/user-attachments/assets/7d18a6e5-a53b-436b-bf26-dbe1db0e89af)
+
+
+
+Class NOTE::
+=================
+
+name: "{{ item }}"   ---->ansible jinja2 formate
+
+Modules::
+===========
+
+apt
+
+copy
+
+services
+
+loop
+
+setup
+
+facts
+
+filter
+
+when
+
+debug
+
+setup --is a one module in ansible 
+     --used to collect the facts--TASK [Gathering Facts] 
+	 
+	 Facts:: information gathering from all the nodes machines
+	 
+>ansible -i srinfotechhosts -m setup -a "filter=*os*" web_servers
+	 
+	   "ansible_os_family": "Debian",
+	   
+	     when: ansible_os_family == "Debian"
+		 
+
+
+Ansible Variable::
+==============
+
+int a =10
+
+1.inventory level  ----lowest priorty 
+
+  a. host level variabels
+  
+  node1@172.31.27.17 package_name=apache2
+  
+  package_name=httpd
+  
+  b. group level variabels
+
+[web_servers]
+node1@172.31.27.17 
+
+package_name=apache2
+
+2.playbook level  ---2nd highest priroty 
+
+vars:
+    package_name: git
+
+3.command line	--->picking the variables command line is highest priority
+
+>ansible-playbook -i srinfotechhosts -e "package_name=apache2" variable.yml
+
+>ansible-playbook -i srinfotechhosts -vvv -e "package_name=apache2" variable.yml -->logs
+		 
+
