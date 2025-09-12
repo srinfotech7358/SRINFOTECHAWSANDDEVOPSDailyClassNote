@@ -6290,6 +6290,7 @@ bash
 Copy
 
 > ansible-galaxy install geerlingguy.tomcat
+
 This will download and install the role into your ~/.ansible/roles/ directory (or the path defined in your ansible.cfg file).
 3. Use the Installed Tomcat Role in Your Playbook
 After installing the role, you can use it in your playbook. Here’s an example of a simple playbook that installs and configures Tomcat:
@@ -6336,6 +6337,77 @@ http://34.216.173.44:8080/manager/html
 ![image](https://github.com/user-attachments/assets/fa5faaeb-ec9e-43f2-9184-7bf46f1433c4)
 
 
+> /opt/tomcat/conf
+
+>sudo vi tomcat-user.xml
+
+><role rolename="manager-gui"/>
+
+<role rolename="manager"/>
+
+ <role rolename="manager-script"/>
+
+ <role rolename="manager-jmx"/>
+ 
+ <role rolename="manager-status"/>
+ 
+ <role rolename="tomcat"/>
+
+ <role rolename="admin"/>
+
+ <user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,tomcat,admin,manager"/>
+
+
+ <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6f29bc01-cc9c-4917-9add-e65325cb83f0" />
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f2b606e6-58ff-48ed-a79b-2aecbee644f2" />
+
+
+We can seen shutdown.sh & startup.sh
+>sudo sh shutdown.sh
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6a10157d-80ae-40d2-8ed2-5eefbecea344" />
+
+
+>sudo sh startup.sh
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/62c3f5f5-e26d-4014-81c1-ec194e6fd2e5" />
+
+
+After added we need to restart the tomcat
+>sudo service tomcat status
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/9007a5d6-1b03-4c6c-b2f5-29ec69913240" />
+
+
+Resolutions for tomcat manager access::
+=======================================
+
+https://stackoverflow.com/questions/36703856/access-tomcat-manager-app-from-different-host
+
+
+For Tomcat v8.5.4 and above, the file <tomcat>/webapps/manager/META-INF/context.xml has been adjusted:
+
+<Context antiResourceLocking="false" privileged="true" >
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+</Context>
+
+		Change this file to comment the Valve:
+<Context antiResourceLocking="false" privileged="true" >
+    <!--
+    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+    allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+    -->
+</Context>
+
+After that, refresh your browser (not need to restart Tomcat), you can see the manager page.
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f1ba1fed-334a-4c30-9ec3-f3b73ccdeada" />
+
+
 Most of the work is done 
 Where is my war file
 
@@ -6352,9 +6424,14 @@ Tomcat by default install
 
 >/opt/tomcat
 
-![image](https://github.com/user-attachments/assets/45a19e09-7641-4dec-b730-d2b01a3ea63b)
+From root folder we need to access webapps folder in tomcat otherwise permission denied
 
-![image](https://github.com/user-attachments/assets/721d2e75-0368-4d87-bdf1-d54331ef8afb)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d9c49b34-6eb5-4c60-9a09-6caa62258acf" />
+
+
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/baebcc3a-b9f9-47ff-9290-94e96ee4e621" />
+
+
 
 ---
 - hosts: Webservers
@@ -6469,25 +6546,28 @@ Copy url to below script:: onlinebookstore.yml
       url: https://srinfotech.s3.us-west-2.amazonaws.com/jobs/AnsibleIntegartedWith+Jenkins/5/onlinebookstore.war
       dest: /opt/tomcat/webapps/onlinebookstore.war
 
-![image](https://github.com/user-attachments/assets/402272bc-6604-4840-a406-c1cc8e95dcc6)
+[image](https://github.com/user-attachments/assets/402272bc-6604-4840-a406-c1cc8e95dcc6)
 
 run the playbook
 
 >ansible-playbook -i hosts onlinebookstore.yml
 
-![image](https://github.com/user-attachments/assets/4ed55d65-f16e-4314-8dba-c3a34c3ee5c2)
+[image](https://github.com/user-attachments/assets/4ed55d65-f16e-4314-8dba-c3a34c3ee5c2)
 
 Success
 
-![image](https://github.com/user-attachments/assets/592b947e-d422-4430-9729-98724403ce0d)
+[image](https://github.com/user-attachments/assets/592b947e-d422-4430-9729-98724403ce0d)
 
 Verify deployment in Tomcat server
 
-![image](https://github.com/user-attachments/assets/c50103d8-21ba-484e-8562-34a1b5b2c0d0)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d684c18-b2f2-4423-955c-b49381c069f0" />
+
 
 http://54.218.133.244:8080/onlinebookstore/
 
-![image](https://github.com/user-attachments/assets/e79ac48a-f76e-42ff-b5a5-28094402c20a)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b9844e78-13b9-4f8f-81ae-e3570c154d08" />
+
 
 
 
