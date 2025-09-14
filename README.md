@@ -6592,24 +6592,29 @@ Go to AWS account and search S3 bucket
 S3=SSS=simple storage services
 
 
-![image](https://github.com/user-attachments/assets/24bc6c86-9063-4d41-9f91-165cdb6238dc)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e33113d-eb98-4698-afe0-7f8cb408cdaf" />
+
 
  
 
 Select S3
 
-![image](https://github.com/user-attachments/assets/91b082dc-65f2-46be-8800-997cd38e117b)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e84a1343-0546-4f4f-b893-7daf06e3102d" />
+
 
  
 
 Click Create bucket
 
- ![image](https://github.com/user-attachments/assets/147baac9-7372-4b3e-9586-77687b9722c6)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6bfd7268-9b17-4f27-ab49-de7c0b5dbdc4" />
+
 
 
 AWS region  --virgenia
 
-![image](https://github.com/user-attachments/assets/fd820852-8d1b-49eb-b8a4-9b33c18e70b7)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e4409642-7012-4d56-a5a6-c3538e08c02c" />
+
 
 
 Bucket name provide
@@ -6620,32 +6625,37 @@ Bucket name provide
 Object Ownership  ---- ACLs enabled selected
 
 
- ![image](https://github.com/user-attachments/assets/d1928ba2-8b6e-4df9-b68d-d94cc15326b8)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c70111a2-32de-478c-b3a6-d07ffdae7977" />
+
 
 
 Unchecked Block all public access
 
 
- ![image](https://github.com/user-attachments/assets/813ea825-a67f-4b77-af97-338992d19d6e)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d189e2d-acdb-4916-9479-f5d60cf75c59" />
+
 
 
 Ackened 
 
- ![image](https://github.com/user-attachments/assets/7b2a5776-e82e-4e4a-921f-1fb75aa02edc)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7974546a-fb2c-47e4-9ba8-f546b8b8ba9b" />
+
 
 
 Click crete bucket
 
 
 
-![image](https://github.com/user-attachments/assets/acfc10ae-76e4-4bb0-bb3e-caaa4c4f429d)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/741009c2-c3b6-476f-992e-a427e8f1599d" />
+
 
  
 
 S3 bucket is created in AWS
 
 
-![image](https://github.com/user-attachments/assets/23c158bb-207d-4a00-8b20-eed9881438e9)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8e984a31-ed36-4b7b-b24d-fad25742cce8" />
+
 
  
 
@@ -6656,7 +6666,8 @@ Installed S3 publisher plugin
 Found S3 profile at system configuration
 
 
-![image](https://github.com/user-attachments/assets/cff577be-a2db-4ee0-b5f3-bfda98ae7384)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aed033d1-2942-4674-888e-baa19124e183" />
+
 
  
 
@@ -6665,56 +6676,66 @@ Create IAM role in AWS account
 
  IAM----> Indentity Access Management
 
-![image](https://github.com/user-attachments/assets/4cbba43f-c06d-43b6-8a27-3dc5c76e4ec2)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/04977423-4c53-4e34-9cfd-0e562c70b6e2" />
 
 
-![image](https://github.com/user-attachments/assets/56b9485f-2538-4558-9963-a0253328a2f8)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4605e66b-87c1-46b3-9870-1c77aba8d748" />
+
 
  
 
 Click Users
 
-![image](https://github.com/user-attachments/assets/5178b83a-f01a-43c5-901b-82aa693ff52d)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5cb8da36-c32c-458a-ace3-5a3030b01d61" />
+
 
  
 
 Click create user
 
 
- ![image](https://github.com/user-attachments/assets/f9c443d3-4172-475c-92fd-d55f8bac2363)
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5ec439c1-6f79-4e04-a760-845b663f73b6" />
+
 
 
 Provide the user name
 
 
-![image](https://github.com/user-attachments/assets/03fa6ef0-f565-47eb-a288-e9db884cb3dd)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6a900d05-4427-4e90-aefd-3cbc393a8d63" />
+
 
  
-![image](https://github.com/user-attachments/assets/63632b00-66bf-494e-8d25-dfd4b7a8fe46)
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1cd30a12-b8d4-422e-80fb-710a3d8b60c1" />
+
 
  
 Click next
  
-![image](https://github.com/user-attachments/assets/5ccb8d94-9dd7-4823-b336-64e1f40185e0)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/96ddc6c1-3d33-4f16-bc21-52b87dde776f" />
 
-![image](https://github.com/user-attachments/assets/0ebcab66-285f-4498-97b9-eac4c1f1d116)
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dfaa67ba-28c6-4111-89d7-7d4009b5f892" />
+
  
 
-![image](https://github.com/user-attachments/assets/61351716-26ce-4f59-abcc-95423a19bb83)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/15dd1e6a-5b6a-48df-a01a-a5a10bf32d57" />
+
 
  
  
 select S3 policies
 
 
- ![image](https://github.com/user-attachments/assets/4108108b-fd6b-4b41-98af-f75c846ade4d)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/443e9b97-88ce-4050-82a6-1175b031f33a" />
+
 
 
 
 User created successfully
 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f95449c8-f412-43f4-a3dd-c6c399e3f5a3" />
 
-![image](https://github.com/user-attachments/assets/9c932e66-b49a-4c79-9acd-e475ce79e89e)
 
  
 User name::
@@ -6726,7 +6747,8 @@ Console password::
 wv9PC8%3
 
 
-![image](https://github.com/user-attachments/assets/7e60afc9-f167-458d-bbd1-dbee13f0668a)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/23b2214e-b14b-449c-97eb-c9ac365b3b56" />
+
 
   
 
@@ -6736,42 +6758,47 @@ Create access & secret keys:;
 Open new user test
 
 
- ![image](https://github.com/user-attachments/assets/0c2db911-ee73-49fa-8521-65b54ec681b9)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2c81aed4-10cb-4796-9fec-f40f91d3f652" />
+
 
 
 Click create access key
 
- ![image](https://github.com/user-attachments/assets/6a165b7e-fbcd-4c02-bae8-7b0d725a45c1)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4f17a10-5db8-476d-967f-d2044701fb54" />
+
 
 
 
 Select Application running on an AWS compute service
 
 
-![image](https://github.com/user-attachments/assets/ef231f9a-1511-430f-a4f9-d5555e903d84)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e12d35b-b095-48d6-bf58-f659aa6f1bf3" />
+
 
  
 
 Click next
 
 
- ![image](https://github.com/user-attachments/assets/b17aa07c-f4e6-4657-a0c8-a8144a2bee0c)
+
 
 
 Access keys created
 
 
-![image](https://github.com/user-attachments/assets/4a5d2768-8666-4c15-96b1-fe050ee523f3)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0580c3b4-e5f0-4398-b8d5-772fb11f6679" />
 
- 
- ![image](https://github.com/user-attachments/assets/07429f2c-a808-4fc6-9908-296c3513ed42)
+
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/eae25e69-c918-4b66-8a1d-38a3d9655589" />
+
 
 
 
 Integaretd S3 with Jenkins
 
 
-![image](https://github.com/user-attachments/assets/e665dc0a-43b6-41dd-8ce7-90bc7cdd1e0a)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1cb3d21d-9c6d-4b34-afc6-c7dd20ccdefc" />
+
 
  
 
@@ -6780,56 +6807,65 @@ Provided access and secret key
 Click test connection
 
 
-![image](https://github.com/user-attachments/assets/9290abf9-a675-4a0a-ab68-9c46678b83e2)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/60b57bed-42ae-45d2-8d51-7ea1c0039fd3" />
+
 
  
 
 Check passed
 
 
- ![image](https://github.com/user-attachments/assets/56db73d5-9d8d-4f6b-9df9-4c76e746de5f)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7394e83a-de5e-49bd-b708-d8207b8133c2" />
+
 
 
 Bucket region us-east-1
 
  
 
- ![image](https://github.com/user-attachments/assets/5179600c-c962-4000-92c9-f78e34ccd596)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1787457e-4e35-4b1a-aba3-75baf19cecb0" />
+
 
  
 
 Destination bucket:: should be give AWS bucket name
 
  
-![image](https://github.com/user-attachments/assets/8273aff6-f175-41fa-a0c2-7c0ba697f74d)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aa86d517-cdf8-4ff3-a831-7f264bc81035" />
+
 
  
-![image](https://github.com/user-attachments/assets/9d35ced8-7e52-4ef3-973d-9fbfdb354f24)
-
-
- ![image](https://github.com/user-attachments/assets/6f78f94c-c349-4c21-ab45-bb14f5c44400)
-
-![image](https://github.com/user-attachments/assets/04ef0eef-31ff-4cb4-a152-74b97dbc3b37)
-
-
-![image](https://github.com/user-attachments/assets/560d116a-206a-4688-9711-620198f6cfad)
-
-
-![image](https://github.com/user-attachments/assets/2d1d7dd4-f351-4752-928f-28377c2d9ad8)
-
-
-![image](https://github.com/user-attachments/assets/6819247b-1cf8-4265-b04b-e79adf3d4051)
-
-![image](https://github.com/user-attachments/assets/db23a9d6-5725-41d8-9083-55173325b240)
-
-
- ![image](https://github.com/user-attachments/assets/77a787c6-07bb-4c22-93fc-07939f1eb36c)
-
-![image](https://github.com/user-attachments/assets/2cfade4f-e8c7-4254-bbcf-e103d84c13c2)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b7c2123e-b2a7-465c-a872-afccfc01fef3" />
 
 
 
-![image](https://github.com/user-attachments/assets/5eaccb62-252d-4a3e-9d53-4768cf153b69)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/839cbab1-d1f6-439f-9068-7ee2d6dae1f3" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7045f250-77a5-4687-9b33-c0de5ba53d26" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5bdd20e2-c8ed-4a86-ae42-26afc62bffbc" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b3b59c26-7ac5-4880-9ed3-8e1b02e683b5" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e6f9bdd1-05fb-4d20-b4cc-b4f5da39c361" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e3e01ef-c0cc-404c-9c94-98c1794ebcad" />
+
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/861390cb-6d8b-42e5-84d3-f0a4094345a4" />
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/84942dea-94a8-4112-a786-61646a97cc8c" />
+
+
 
 Should be enabled Manage artifacts options
 
