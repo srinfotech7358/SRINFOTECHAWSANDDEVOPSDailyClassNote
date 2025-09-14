@@ -6571,3 +6571,273 @@ http://54.218.133.244:8080/onlinebookstore/
 
 
 
+
+12/09/2025::
+==============
+
+
+Integrated Ansible & Tomcat & S3 With Jenkins::
+===============================================
+
+
+<img width="1658" height="659" alt="image" src="https://github.com/user-attachments/assets/85499e98-21ec-4a2c-aabd-3da2ed245ade" />
+
+
+
+S3 bucket creation and integrate S3 with Jenkins::
+=====================================================
+
+Go to AWS account and search S3 bucket 
+
+S3=SSS=simple storage services
+
+
+![image](https://github.com/user-attachments/assets/24bc6c86-9063-4d41-9f91-165cdb6238dc)
+
+ 
+
+Select S3
+
+![image](https://github.com/user-attachments/assets/91b082dc-65f2-46be-8800-997cd38e117b)
+
+ 
+
+Click Create bucket
+
+ ![image](https://github.com/user-attachments/assets/147baac9-7372-4b3e-9586-77687b9722c6)
+
+
+AWS region  --virgenia
+
+![image](https://github.com/user-attachments/assets/fd820852-8d1b-49eb-b8a4-9b33c18e70b7)
+
+
+Bucket name provide
+
+
+ 
+
+Object Ownership  ---- ACLs enabled selected
+
+
+ ![image](https://github.com/user-attachments/assets/d1928ba2-8b6e-4df9-b68d-d94cc15326b8)
+
+
+Unchecked Block all public access
+
+
+ ![image](https://github.com/user-attachments/assets/813ea825-a67f-4b77-af97-338992d19d6e)
+
+
+Ackened 
+
+ ![image](https://github.com/user-attachments/assets/7b2a5776-e82e-4e4a-921f-1fb75aa02edc)
+
+
+Click crete bucket
+
+
+
+![image](https://github.com/user-attachments/assets/acfc10ae-76e4-4bb0-bb3e-caaa4c4f429d)
+
+ 
+
+S3 bucket is created in AWS
+
+
+![image](https://github.com/user-attachments/assets/23c158bb-207d-4a00-8b20-eed9881438e9)
+
+ 
+
+First installed Jenkins in AWS ubuntu machine
+
+Installed S3 publisher plugin
+
+Found S3 profile at system configuration
+
+
+![image](https://github.com/user-attachments/assets/cff577be-a2db-4ee0-b5f3-bfda98ae7384)
+
+ 
+
+Second step::
+Create IAM role in AWS account
+
+ IAM----> Indentity Access Management
+
+![image](https://github.com/user-attachments/assets/4cbba43f-c06d-43b6-8a27-3dc5c76e4ec2)
+
+
+![image](https://github.com/user-attachments/assets/56b9485f-2538-4558-9963-a0253328a2f8)
+
+ 
+
+Click Users
+
+![image](https://github.com/user-attachments/assets/5178b83a-f01a-43c5-901b-82aa693ff52d)
+
+ 
+
+Click create user
+
+
+ ![image](https://github.com/user-attachments/assets/f9c443d3-4172-475c-92fd-d55f8bac2363)
+
+
+Provide the user name
+
+
+![image](https://github.com/user-attachments/assets/03fa6ef0-f565-47eb-a288-e9db884cb3dd)
+
+ 
+![image](https://github.com/user-attachments/assets/63632b00-66bf-494e-8d25-dfd4b7a8fe46)
+
+ 
+Click next
+ 
+![image](https://github.com/user-attachments/assets/5ccb8d94-9dd7-4823-b336-64e1f40185e0)
+
+![image](https://github.com/user-attachments/assets/0ebcab66-285f-4498-97b9-eac4c1f1d116)
+ 
+
+![image](https://github.com/user-attachments/assets/61351716-26ce-4f59-abcc-95423a19bb83)
+
+ 
+ 
+select S3 policies
+
+
+ ![image](https://github.com/user-attachments/assets/4108108b-fd6b-4b41-98af-f75c846ade4d)
+
+
+
+User created successfully
+
+
+![image](https://github.com/user-attachments/assets/9c932e66-b49a-4c79-9acd-e475ce79e89e)
+
+ 
+User name::
+
+SRInfotech
+
+Console password::
+
+wv9PC8%3
+
+
+![image](https://github.com/user-attachments/assets/7e60afc9-f167-458d-bbd1-dbee13f0668a)
+
+  
+
+
+Create access & secret keys:;
+
+Open new user test
+
+
+ ![image](https://github.com/user-attachments/assets/0c2db911-ee73-49fa-8521-65b54ec681b9)
+
+
+Click create access key
+
+ ![image](https://github.com/user-attachments/assets/6a165b7e-fbcd-4c02-bae8-7b0d725a45c1)
+
+
+
+Select Application running on an AWS compute service
+
+
+![image](https://github.com/user-attachments/assets/ef231f9a-1511-430f-a4f9-d5555e903d84)
+
+ 
+
+Click next
+
+
+ ![image](https://github.com/user-attachments/assets/b17aa07c-f4e6-4657-a0c8-a8144a2bee0c)
+
+
+Access keys created
+
+
+![image](https://github.com/user-attachments/assets/4a5d2768-8666-4c15-96b1-fe050ee523f3)
+
+ 
+ ![image](https://github.com/user-attachments/assets/07429f2c-a808-4fc6-9908-296c3513ed42)
+
+
+
+Integaretd S3 with Jenkins
+
+
+![image](https://github.com/user-attachments/assets/e665dc0a-43b6-41dd-8ce7-90bc7cdd1e0a)
+
+ 
+
+Provided access and secret key
+
+Click test connection
+
+
+![image](https://github.com/user-attachments/assets/9290abf9-a675-4a0a-ab68-9c46678b83e2)
+
+ 
+
+Check passed
+
+
+ ![image](https://github.com/user-attachments/assets/56db73d5-9d8d-4f6b-9df9-4c76e746de5f)
+
+
+Bucket region us-east-1
+
+ 
+
+ ![image](https://github.com/user-attachments/assets/5179600c-c962-4000-92c9-f78e34ccd596)
+
+ 
+
+Destination bucket:: should be give AWS bucket name
+
+ 
+![image](https://github.com/user-attachments/assets/8273aff6-f175-41fa-a0c2-7c0ba697f74d)
+
+ 
+![image](https://github.com/user-attachments/assets/9d35ced8-7e52-4ef3-973d-9fbfdb354f24)
+
+
+ ![image](https://github.com/user-attachments/assets/6f78f94c-c349-4c21-ab45-bb14f5c44400)
+
+![image](https://github.com/user-attachments/assets/04ef0eef-31ff-4cb4-a152-74b97dbc3b37)
+
+
+![image](https://github.com/user-attachments/assets/560d116a-206a-4688-9711-620198f6cfad)
+
+
+![image](https://github.com/user-attachments/assets/2d1d7dd4-f351-4752-928f-28377c2d9ad8)
+
+
+![image](https://github.com/user-attachments/assets/6819247b-1cf8-4265-b04b-e79adf3d4051)
+
+![image](https://github.com/user-attachments/assets/db23a9d6-5725-41d8-9083-55173325b240)
+
+
+ ![image](https://github.com/user-attachments/assets/77a787c6-07bb-4c22-93fc-07939f1eb36c)
+
+![image](https://github.com/user-attachments/assets/2cfade4f-e8c7-4254-bbcf-e103d84c13c2)
+
+
+
+![image](https://github.com/user-attachments/assets/5eaccb62-252d-4a3e-9d53-4768cf153b69)
+
+Should be enabled Manage artifacts options
+
+
+ Publish artifacts to S3 Bucket Build is still running
+Publish artifacts to S3 Bucket Using S3 profile: S3Publisher
+Publish artifacts to S3 Bucket bucket=srinfotech3, file=onlinebookstore.war region=us-east-1, will be uploaded from slave=false managed=true , server encryption false
+Finished: SUCCESS
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/853ad6fa-e0c0-4c41-bcb5-9109fa3f79aa" />
+
