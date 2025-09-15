@@ -6877,3 +6877,70 @@ Finished: SUCCESS
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/853ad6fa-e0c0-4c41-bcb5-9109fa3f79aa" />
 
+
+
+
+
+15/09/2025::
+===============
+
+
+
+ Docker Introductions::
+=================
+
+Docker is an opensource & Applicatuions level virtualization technology and it's called containirazition.
+
+Docker is an open-source platform that automates the deployment, scaling, and management of applications in lightweight, portable containers. Containers are isolated environments that package an application and all its dependencies (such as libraries, binaries, and configurations) to ensure it runs uniformly across different computing environments.
+
+![image](https://github.com/user-attachments/assets/c3b1350c-eb6b-44f1-94b1-0c05b65c3653)
+
+Docker is a platform and that make it easier to create, deploy, and run applications using containers. Containers are lightweight, standalone, and executable units that include everything needed to run a piece of software, including the code, runtime, libraries, and system tools.
+
+container ::
+==============
+1.container is an insolation area of executuions of your applications
+ OR
+ instance of images are called containers
+2.Containers are created from “images”
+3. Containers are the core of Docker. They are lightweight, portable, and isolated environments where applications run.
+  Docker is run your software packages /Applications  in containers called containarizations.
+
+4. if you build a docker container for your application called containerization
+5. containers have it’s own boundaries  
+
+who will create containers?
+Ans --docker images are created the containers
+
+ Docker Images:
+ ===============
+
+ docker image is a package with all dependencies and the necessary 
+information to create the container and docker image derived from multiple base images.
+
+An image is a snapshot of a container, a blueprint that defines what the container will contain and how it will behave when run. It consists of an application and its dependencies. Docker images are built using a Dockerfile
+
+Docker Registry::
+====================
+
+A Docker Registry is a system for storing and distributing Docker images. It is a centralized location where Docker images can be uploaded (pushed), stored, and downloaded (pulled) by users and applications. Docker images are the building blocks of containers, and registries provide a way to manage, version, and share these images across different environments.
+
+Default registry :: https://hub.docker.com/
+
+Physical & Virtual & Hypervisors/VMwares::
+=============================================
+
+1.tomcat & nodejs containers have it’s own process tree,own files systems,own network interfaces own storage,ram…etc
+2.when you want to give application to your team/testers  docker is the best choice and when you want give system to your team/ testers VMwares are best choice.
+3.application level virtulization docker is the best choice and OS level virtulization VMwares are best choice
+4.individually scale the your application very easy in docker
+
+![image](https://github.com/user-attachments/assets/c3b1350c-eb6b-44f1-94b1-0c05b65c3653)
+
+
+Example:: For festival season In your organization leave management application multiple employees are applied leaves at the same time in that scenario docker is very easy to scale the one more application but physically it’s very difficult so docker is the best choice
+
+
+![image](https://github.com/user-attachments/assets/c3b1350c-eb6b-44f1-94b1-0c05b65c3653)
+
+
