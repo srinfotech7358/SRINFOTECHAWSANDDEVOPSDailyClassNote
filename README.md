@@ -6947,3 +6947,154 @@ Example:: For festival season In your organization leave management application 
 
 
 
+
+16/09/2025::
+==============
+
+Install Docker in Ubuntu machine::
+=====================================
+
+Please follow below link steps to install the docker in ubuntu and please read all the content in that link
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04
+
+once installed docker please verify below commands::
+
+>docker --version
+
+root@ip-172-31-20-86:~# docker --version
+Docker version 28.0.4, build b8034c0
+
+root@ip-172-31-20-86:~# docker info
+Client: Docker Engine - Community
+ Version:    28.0.4
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.22.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+  compose: Docker Compose (Docker Inc.)
+    Version:  v2.34.0
+    Path:     /usr/libexec/docker/cli-plugins/docker-compose
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 28.0.4
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 05044ec0a9a75232cad458027ca83437aae3f4da
+ runc version: v1.2.5-0-g59923ef
+ init version: de40ad0
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-1024-aws
+ Operating System: Ubuntu 24.04.2 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 2
+ Total Memory: 3.82GiB
+ Name: ip-172-31-20-86
+ ID: 201c6f4b-75d3-4326-adf5-00b9a82a8d4d
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Experimental: false
+ Insecure Registries:
+  ::1/128
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+if above page is came without any erros, it means docker is installed in your machine
+
+
+Docker High Level Client -Server Architecture::
+==================================
+
+
+<img width="1700" height="665" alt="image" src="https://github.com/user-attachments/assets/0c95b9d4-34ac-4795-aa30-addb1952b6a3" />
+
+
+
+Docker's high-level architecture revolves around several components that work together to provide containerization and isolation for applications
+
+
+Docker Client (CLI)::
+=================
+
+The Docker Client is the primary interface for interacting with Docker. It can be a command-line interface (CLI), like the docker command, or a graphical interface (GUI) in some tools.
+
+It allows users to interact with Docker's features, such as building containers, running containers, and managing containers and images.
+
+It sends requests to the Docker Daemon to execute commands.
+
+Docker Daemon (Dockerd)::
+====================
+
+The Docker Daemon (also known as dockerd) is the core component of Docker. It runs in the background on the host system.
+
+The daemon is responsible for managing Docker containers, images, networks, and volumes. It listens for Docker API requests and handles container lifecycle operations such as starting, stopping, and building containers.
+
+The Docker Daemon can communicate with multiple Docker clients, allowing for distributed management of containers.
+
+Flow:
+============
+1.The Docker Client sends a command to the Docker Daemon.
+
+2.The Docker Daemon interacts with containers, images, and storage volumes.
+
+3.The Docker Daemon can pull images from a Docker Registry.
+
+4.The Docker Daemon runs containers based on the images and handles networking and storage.
+
+Docker commands::
+====================
+
+ >docker pull <imagename>
+
+ >docker pull hello-world
+
+ >docker images   ----used to display the all images
+
+ > docker image ls ----used to display the all images
+ 
+ >docker run ---used to build the images and create the container
+
+Create the Jenkins container::
+=================================
+
+>docker run -d -p 8080:8080 jenkins/jenkins:jdk21
+
+
+http://35.155.150.89:8080/
+
+
+![image](https://github.com/user-attachments/assets/30576b75-b3ee-47e1-97f0-f535c46ff015)
+
+
+>docker ps
+
+above command is used to verify the how many containers are running
+
+
