@@ -7081,6 +7081,78 @@ Docker commands::
  
  >docker run ---used to build the images and create the container
 
+
+Class Note Docker commands::
+==============================
+
+
+Docker commands::
+
+>docker pull <imagename>
+
+>docker pull hello-world
+
+>docker images
+
+Common Commands:
+  run         Create and run a new container from an image
+  
+  exec        Execute a command in a running container
+ 
+  ps          List containers
+  
+ 
+  build       Build an image from a Dockerfile
+  
+  bake        Build from a file
+ 
+  pull        Download an image from a registry
+ 
+  push        Upload an image to a registry
+
+  images      List images
+ 
+  login       Authenticate to a registry
+ 
+  logout      Log out from a registry
+ 
+  search      Search Docker Hub for images
+ 
+  version     Show the Docker version information
+  
+  info        Display system-wide information
+
+>docker pull <imagename>:<tagname>
+
+>docker pull hello-world:latest
+
+>docker run hello-world:latest
+
+>docker ps
+
+>docker ps -a
+
+>docker rm <containerID> OR <containerName>
+
+NOTE:: one image we can able to cerate number of containers
+
+>docker rm $(docker ps -a)
+
+i want install jenkins using docker conatiners
+
+>docker run -p 8080:8080 jenkins/jenkins:jdk17\
+
+>docker run -d -p 8080:8080 jenkins/jenkins:jdk17
+ running the contaenr in background
+ 
+ >docker run -d -p 8080:8080 jenkins/jenkins:jdk17
+ 
+ go to the inside the conatainers pleas euse below command
+ 
+ >docker exec -it <containerID> /bin/bash
+
+ >docker exec -it 1d9f1ee478e5 /bin/bash
+
 Create the Jenkins container::
 =================================
 
