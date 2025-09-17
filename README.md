@@ -7090,7 +7090,8 @@ Create the Jenkins container::
 http://35.155.150.89:8080/
 
 
-![image](https://github.com/user-attachments/assets/30576b75-b3ee-47e1-97f0-f535c46ff015)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/530aabac-2e7f-4db6-aa07-bde32e46cd12" />
+
 
 
 >docker ps
